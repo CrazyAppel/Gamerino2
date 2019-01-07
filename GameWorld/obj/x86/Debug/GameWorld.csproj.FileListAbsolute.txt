@@ -1,0 +1,137 @@
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\Content\Player.xnb
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\Content\Tile1.xnb
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\Content\Tile2.xnb
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\GameWorld.exe
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\GameWorld.pdb
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\obj\x86\Debug\GameWorld.csprojResolveAssemblyReference.cache
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\obj\x86\Debug\GameWorld.exe
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\obj\x86\Debug\GameWorld.pdb
+c:\users\kruys\documents\visual studio 2015\Projects\GameWorld\GameWorld\bin\Windows\x86\Debug\Content\Tile3.xnb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\obj\x86\Debug\GameWorld.exe
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\obj\x86\Debug\GameWorld.pdb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\obj\x86\Debug\GameWorld.csprojResolveAssemblyReference.cache
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\Content\Player.xnb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\Content\Tile1.xnb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\Content\Tile2.xnb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\Content\Tile3.xnb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\GameWorld.exe
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\GameWorld.pdb
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\kruys\Documents\Visual Studio 2015\Projects\GameWorld - Copy\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\Content\Player.xnb
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\Content\Tile1.xnb
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\Content\Tile2.xnb
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\Content\Tile3.xnb
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\GameWorld.exe
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\GameWorld.pdb
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\GitHub\Game\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\GitHub\Game\GameWorld\obj\x86\Debug\GameWorld.csprojAssemblyReference.cache
+D:\GitHub\Game\GameWorld\obj\x86\Debug\GameWorld.csproj.CoreCompileInputs.cache
+D:\GitHub\Game\GameWorld\obj\x86\Debug\GameWorld.csproj.CopyComplete
+D:\GitHub\Game\GameWorld\obj\x86\Debug\GameWorld.exe
+D:\GitHub\Game\GameWorld\obj\x86\Debug\GameWorld.pdb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\Content\Player.xnb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\Content\Tile1.xnb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\Content\Tile2.xnb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\Content\Tile3.xnb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\GameWorld.exe
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\GameWorld.pdb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.dll
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
+J:\SWAG\Game_Kasper\GameWorld\obj\x86\Debug\GameWorld.csprojAssemblyReference.cache
+J:\SWAG\Game_Kasper\GameWorld\obj\x86\Debug\GameWorld.csproj.CoreCompileInputs.cache
+J:\SWAG\Game_Kasper\GameWorld\obj\x86\Debug\GameWorld.csproj.CopyComplete
+J:\SWAG\Game_Kasper\GameWorld\obj\x86\Debug\GameWorld.exe
+J:\SWAG\Game_Kasper\GameWorld\obj\x86\Debug\GameWorld.pdb
+J:\SWAG\Game_Kasper\GameWorld\bin\Windows\x86\Debug\Content\Tile4.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\Content\Player.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\Content\Tile1.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\Content\Tile2.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\Content\Tile3.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\Content\Tile4.xnb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\GameWorld.exe
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\GameWorld.pdb
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\obj\x86\Debug\GameWorld.csprojAssemblyReference.cache
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\obj\x86\Debug\GameWorld.csproj.CoreCompileInputs.cache
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\obj\x86\Debug\GameWorld.csproj.CopyComplete
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\obj\x86\Debug\GameWorld.exe
+C:\Users\Peter\Desktop\Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab\GameWorld\obj\x86\Debug\GameWorld.pdb

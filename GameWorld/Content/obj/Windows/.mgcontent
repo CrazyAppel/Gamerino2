@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Player.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile1.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile2.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile3.png</File>
+    <File>J:/SWAG/Game_Kasper/GameWorld/Content/Tile4.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

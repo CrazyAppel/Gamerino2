@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -45,7 +46,7 @@ namespace GameWorld
             rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
             origin = new Vector2(0, 0);
 
-            Input(gameTime);
+            Movement(gameTime);
             if (velocity.Y < 10)
             {
                 hasJumped = true;
@@ -53,7 +54,7 @@ namespace GameWorld
             }
         }
 
-        private void Input(GameTime gameTime)
+        private void Movement(GameTime gameTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
@@ -88,13 +89,15 @@ namespace GameWorld
             }
         }
 
-        public void checkCoinColision(Coin coin)
+        public void checkCoinColision(Coin coin, SoundEffect effect)
         {
             if (IntersectsPixel(this.rectangle, this.textureData, coin.rectangle, coin.textureData))
             {
+               
                 
+                if (coin.picked == false) effect.Play();
+                if (coin.picked == true);
                 coin.picked = true;
-                
             }
         }
 

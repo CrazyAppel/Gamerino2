@@ -13,4 +13,5 @@ namespace GameWorld
         public Keys Right { get; set; }
         public Keys Jump { get; set; }
     }
+    
 }

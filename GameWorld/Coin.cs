@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -15,7 +16,7 @@ namespace GameWorld
         public Rectangle rectangle;
         public Color[] textureData { get; set; }
         public Vector2 position;
-
+        public SoundEffect coinsound;
         public bool picked = false;
 
         public Coin() { }
@@ -25,7 +26,7 @@ namespace GameWorld
             texture = Content.Load<Texture2D>("Tile4");
             textureData = new Color[texture.Width * texture.Height];
             texture.GetData(textureData);
-           
+            coinsound = Content.Load<SoundEffect>("WOO");
         }
         
         public void Update(GameTime gameTime, Player player)

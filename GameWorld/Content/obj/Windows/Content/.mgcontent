@@ -4,13 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Peter/Desktop/Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab/GameWorld/Content/Player.png</File>
-    <File>C:/Users/Peter/Desktop/Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab/GameWorld/Content/Tile1.png</File>
-    <File>C:/Users/Peter/Desktop/Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab/GameWorld/Content/Tile2.png</File>
-    <File>C:/Users/Peter/Desktop/Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab/GameWorld/Content/Tile3.png</File>
-    <File>C:/Users/Peter/Desktop/Game_Kasper-c731666fe6164da628a6fc4d81ceac35dbbb67ab/GameWorld/Content/Tile4.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile4.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/WOO.wav</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

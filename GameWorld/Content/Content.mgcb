@@ -73,3 +73,9 @@
 /processorParam:TextureFormat=Color
 /build:Tile4.png
 
+#begin WOO.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:WOO.wav
+

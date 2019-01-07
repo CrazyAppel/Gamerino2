@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
@@ -12,6 +13,9 @@ namespace GameWorld
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        //SOUNDEFFECTS
+        SoundEffect effect;
 
         Camera camera;
         Map level;
@@ -37,7 +41,7 @@ namespace GameWorld
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            
             level = new Map();
             enemies = new List<Enemy>();
             coins = new List<Coin>();
@@ -58,8 +62,8 @@ namespace GameWorld
 
         private void initiateEnemies()
         {
-            coin1.position = new Vector2(400, 100);
-            coin2.position = new Vector2(600, 100);
+            coin1.position = new Vector2(250, 296);
+            coin2.position = new Vector2(405, 296);
             enemy1.position = new Vector2(900, 380);
             enemy2.position = new Vector2(100, 380);
             enemy1.speed = 1f;
@@ -75,15 +79,16 @@ namespace GameWorld
             spriteBatch = new SpriteBatch(GraphicsDevice);
             IsMouseVisible = true;
             //enemy = new Enemy(Content.Load<Texture2D>("Player"), new Vector2(900, 384), 1000);
-        
+            
             Tiles.Content = Content;
             
             camera = new Camera(GraphicsDevice.Viewport);
 
             level.Level2();
            
+            //soundeffect
+            effect = Content.Load<SoundEffect>("WOO");
 
-            
 
             player.Load(Content);
             foreach (Enemy enemy in enemies)
@@ -143,7 +148,7 @@ namespace GameWorld
             }
             foreach (Coin coin in coins)
             {
-                player.checkCoinColision(coin);
+                player.checkCoinColision(coin,effect);
             }
             base.Update(gameTime);
         }

@@ -1,0 +1,14 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/GitHub/Gamerino2/GameWorld/Content/File.spritefont","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/File.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0.3172886
+"D:/GitHub/Gamerino2/GameWorld/Content/Player.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.0140123
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-idle-1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-idle-1.xnb","TextureProcessor","Texture2DContent",1442,23685,0.1291276
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-1.xnb","TextureProcessor","Texture2DContent",2008,23685,0.0020017
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-2.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-2.xnb","TextureProcessor","Texture2DContent",1936,23685,0.0040036
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-3.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-3.xnb","TextureProcessor","Texture2DContent",1872,23685,0.0010009
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-4.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-4.xnb","TextureProcessor","Texture2DContent",2023,23685,0.0020006
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-5.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-5.xnb","TextureProcessor","Texture2DContent",2043,23685,0.0020013
+"D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-6.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-6.xnb","TextureProcessor","Texture2DContent",2013,23685,0.0019999
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.0100093
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.0070169
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Tile3.xnb","TextureProcessor","Texture2DContent",1894,65621,0.0020015
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile4.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Tile4.xnb","TextureProcessor","Texture2DContent",11944,67685,0.0020026

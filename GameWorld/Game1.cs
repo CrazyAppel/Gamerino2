@@ -1,7 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameWorld.Models;
+using GameWorld.Sprite;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
 
 namespace GameWorld
@@ -11,12 +14,27 @@ namespace GameWorld
     /// </summary>
     public class Game1 : Game
     {
+        
+        
+          private enum GameState
+          {
+              TitleScreen,
+              InGame,
+              EndGame,
+              GameOver,
+              PauseGame
+          }
+        GameState _currentGameState;
+        private Texture2D _titleScreenTexture, _endGameTexture;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         //SOUNDEFFECTS
-        SoundEffect effect;
-
+        private Song Backgroundmusic;
+        private SoundEffect effect, effect2;
+        
+        
         Camera camera;
         Map level;
         Enemy enemy1, enemy2;
@@ -41,6 +59,7 @@ namespace GameWorld
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            _currentGameState = GameState.TitleScreen;
             
             level = new Map();
             enemies = new List<Enemy>();
@@ -50,7 +69,7 @@ namespace GameWorld
             coin1 = new Coin();
             coin2 = new Coin();
             player = new Player();
-            initiateEnemies();
+            initiateObjects();
             base.Initialize();
         }
 
@@ -60,7 +79,7 @@ namespace GameWorld
         /// </summary>
         /// 
 
-        private void initiateEnemies()
+        private void initiateObjects()
         {
             coin1.position = new Vector2(250, 296);
             coin2.position = new Vector2(405, 296);
@@ -75,6 +94,7 @@ namespace GameWorld
         }
         protected override void LoadContent()
         {
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             IsMouseVisible = true;
@@ -85,11 +105,18 @@ namespace GameWorld
             camera = new Camera(GraphicsDevice.Viewport);
 
             level.Level2();
-           
+
             //soundeffect
-            effect = Content.Load<SoundEffect>("WOO");
-
-
+             effect = Content.Load<SoundEffect>("WOO");
+             effect2 = Content.Load<SoundEffect>("Deadaf");
+            Backgroundmusic = Content.Load<Song>("Song");
+            MediaPlayer.Volume = 0.03f;
+            MediaPlayer.Play(Backgroundmusic);
+            MediaPlayer.IsRepeating = true;
+            //TEXTURES
+            _titleScreenTexture = Content.Load<Texture2D>("titlescreen");
+            _endGameTexture = Content.Load<Texture2D>("titlescreen");
+            
             player.Load(Content);
             foreach (Enemy enemy in enemies)
             {
@@ -121,35 +148,67 @@ namespace GameWorld
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            player.Update(gameTime);
-            foreach (Enemy enemy in enemies)
+            
+            switch (_currentGameState)
             {
-                enemy.Update(gameTime, player);
+                case GameState.TitleScreen:
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    {
+                        _currentGameState = GameState.InGame;
+                    }
+                    break;
+                case GameState.InGame:
+
+                    player.Update(gameTime);
+                    foreach (Enemy enemy in enemies)
+                    {
+                        enemy.Update(gameTime, player);
+                    }
+                    foreach (Coin coin in coins)
+                    {
+                        coin.Update(gameTime, player);
+                    }
+                    //enemy.Update(gameTime, player);
+                    
+
+                    foreach (Enemy enemy in enemies)
+                    {
+                        player.checkEnemyCollision(enemy, effect2);
+                    }
+                    foreach (Coin coin in coins)
+                    {
+                        player.checkCoinColision(coin, effect);
+                    }
+                    if (player.score == 2)
+                    {
+                        _currentGameState = GameState.EndGame;
+                    }
+
+
+                    break;
+                case GameState.EndGame:
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    {
+                        _currentGameState = GameState.InGame;
+                        player.score = 0;
+                    }
+                    break;
+
+
             }
-            foreach (Coin coin in coins)
-            {
-                coin.Update(gameTime, player);
-            }
-            //enemy.Update(gameTime, player);
+
             foreach (CollisionTiles tile in level.CollisionTiles)
             {
-                player.Collision(tile.Rectangle, level.Width, level.Height, tile.isDeadly);
+                player.Collision(tile.Rectangle, level.Width, level.Height, tile.isDeadly, effect2);
                 foreach (Enemy enemy in enemies)
                 {
                     enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 }
-               
+
                 //enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 camera.Update(player.Position, level.Width, level.Height);
             }
-            foreach (Enemy enemy in enemies)
-            { 
-            player.checkEnemyCollision(enemy);
-            }
-            foreach (Coin coin in coins)
-            {
-                player.checkCoinColision(coin,effect);
-            }
+
             base.Update(gameTime);
         }
 
@@ -160,26 +219,41 @@ namespace GameWorld
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
+            
+            switch (_currentGameState)
+            {
+                case GameState.TitleScreen:
+                    spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
+                    break;
+                case GameState.InGame:
 
+                    foreach (Enemy enemy in enemies)
+                    {
+                        enemy.Draw(spriteBatch);
+                    }
+                    foreach (Coin coin in coins)
+                    {
+                        if (coin.picked == false)
+                        {
+                            coin.Draw(spriteBatch);
+                        }
+
+                    }
+
+                    //enemy.Draw(spriteBatch);
+                    level.Draw(spriteBatch);
+                    player.Draw(spriteBatch);
+                    break;
+
+                case GameState.EndGame:
+                    spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
+                    break;
+            }
             // TODO: Add your drawing code here
 
-            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null,camera.Transform);
-            foreach (Enemy enemy in enemies)
-            {
-                enemy.Draw(spriteBatch);
-            }
-            foreach (Coin coin in coins)
-            {
-                if(coin.picked == false)
-                {
-                    coin.Draw(spriteBatch);
-                }
-                
-                
-            }
-            //enemy.Draw(spriteBatch);
-            level.Draw(spriteBatch);
-            player.Draw(spriteBatch);
+            
             
             spriteBatch.End();
 

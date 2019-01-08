@@ -14,7 +14,7 @@ namespace GameWorld
     {
         private Texture2D texture;
         public Rectangle rectangle;
-        public Color[] textureData { get; set; }
+        public Color[] TextureData { get; set; }
         public Vector2 position;
         public SoundEffect coinsound;
         public bool picked = false;
@@ -24,9 +24,10 @@ namespace GameWorld
         public void Load(ContentManager Content)
         {
             texture = Content.Load<Texture2D>("Tile4");
-            textureData = new Color[texture.Width * texture.Height];
-            texture.GetData(textureData);
+            TextureData = new Color[texture.Width * texture.Height];
+            texture.GetData(TextureData);
             coinsound = Content.Load<SoundEffect>("WOO");
+            
         }
         
         public void Update(GameTime gameTime, Player player)

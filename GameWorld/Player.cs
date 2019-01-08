@@ -14,7 +14,8 @@ namespace GameWorld
     class Player
     {
 
-       
+        public int score = 0;
+
         private Texture2D texture;
         private Vector2 position = new Vector2(450,100);
         private Vector2 velocity;
@@ -79,29 +80,30 @@ namespace GameWorld
             }
         }
 
-        public void checkEnemyCollision(Enemy enemy)
+        public void checkEnemyCollision(Enemy enemy, SoundEffect effect)
         {
-            if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.textureData))
+            if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.TextureData))
             {
                 //snowball.IsRemoved = true;
                 //hasDied = true;
                 position = new Vector2(450, 100);
+                effect.Play();
             }
         }
 
         public void checkCoinColision(Coin coin, SoundEffect effect)
         {
-            if (IntersectsPixel(this.rectangle, this.textureData, coin.rectangle, coin.textureData))
+            if (IntersectsPixel(this.rectangle, this.textureData, coin.rectangle, coin.TextureData))
             {
-               
+
+
+                if (coin.picked == false) { effect.Play(volume:0.1f, pitch:0.0f, pan: 0.0f); score++; } //VOLUME HOOG = 1... 0.1 is al luid. (mss voor sound edit)
                 
-                if (coin.picked == false) effect.Play();
-                if (coin.picked == true);
                 coin.picked = true;
             }
         }
 
-        public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly)
+        public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly, SoundEffect effect)
         {
             if (rectangle.TouchTopOf(newRectangle))
             {
@@ -131,8 +133,9 @@ namespace GameWorld
                 }*/
             if (isDeadly == true && (rectangle.TouchTopOf(newRectangle) /*|| rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle)*/ || rectangle.TouchBottomOf(newRectangle)))
             {
+                
                 position = new Vector2(450, 100);
-               
+                effect.Play();
             }
             
 

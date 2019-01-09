@@ -97,7 +97,7 @@ namespace GameWorld
             {
 
 
-                if (coin.picked == false) { effect.Play(volume:0.1f, pitch:0.0f, pan: 0.0f); score++; } //VOLUME HOOG = 1... 0.1 is al luid. (mss voor sound edit)
+                if (coin.picked == false) { effect.Play(); score++; } 
                 
                 coin.picked = true;
             }

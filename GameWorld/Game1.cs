@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System;
 using System.Collections.Generic;
 
 namespace GameWorld
@@ -25,7 +26,10 @@ namespace GameWorld
               PauseGame
           }
         GameState _currentGameState;
-        private Texture2D _titleScreenTexture, _endGameTexture;
+        private Texture2D _titleScreenTexture, _endGameTexture, _pauseTexture;
+        bool pause = false;
+        
+        
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -48,6 +52,8 @@ namespace GameWorld
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+             
         }
 
         /// <summary>
@@ -110,10 +116,14 @@ namespace GameWorld
              effect = Content.Load<SoundEffect>("WOO");
              effect2 = Content.Load<SoundEffect>("Deadaf");
             Backgroundmusic = Content.Load<Song>("Song");
+
+            //CHANGE VOLUME VAN GELUIDEN
             MediaPlayer.Volume = 0.03f;
+            SoundEffect.MasterVolume = 0.03f;
             MediaPlayer.Play(Backgroundmusic);
             MediaPlayer.IsRepeating = true;
             //TEXTURES
+            _pauseTexture = Content.Load<Texture2D>("titlescreen");
             _titleScreenTexture = Content.Load<Texture2D>("titlescreen");
             _endGameTexture = Content.Load<Texture2D>("titlescreen");
             
@@ -149,16 +159,26 @@ namespace GameWorld
         protected override void Update(GameTime gameTime)
         {
             
+            
             switch (_currentGameState)
             {
                 case GameState.TitleScreen:
-                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    if (Keyboard.GetState().IsKeyUp(Keys.Enter))
                     {
                         _currentGameState = GameState.InGame;
                     }
                     break;
                 case GameState.InGame:
 
+                    if (!pause)
+                    {
+                        if (Keyboard.GetState().IsKeyDown(Keys.P))
+                        {
+                            pause = true;
+                            gameTime.Equals(5000);
+
+                        }
+                 
                     player.Update(gameTime);
                     foreach (Enemy enemy in enemies)
                     {
@@ -183,6 +203,15 @@ namespace GameWorld
                     {
                         _currentGameState = GameState.EndGame;
                     }
+
+
+                    }
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.P) && pause == true)
+                    {
+                        pause = false;
+                    }
+
 
 
                     break;
@@ -253,7 +282,10 @@ namespace GameWorld
             }
             // TODO: Add your drawing code here
 
-            
+            if (pause)
+            {
+                spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
+            }
             
             spriteBatch.End();
 

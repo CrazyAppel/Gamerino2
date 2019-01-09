@@ -51,10 +51,7 @@ namespace GameWorld
                     {
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true));
                     }
-                    if (number == 4)
-                    {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false));
-                    }
+                    
 
 
 

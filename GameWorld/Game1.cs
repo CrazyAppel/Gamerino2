@@ -52,8 +52,6 @@ namespace GameWorld
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
-             
         }
 
         /// <summary>
@@ -163,7 +161,7 @@ namespace GameWorld
             switch (_currentGameState)
             {
                 case GameState.TitleScreen:
-                    if (Keyboard.GetState().IsKeyUp(Keys.Enter))
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                     {
                         _currentGameState = GameState.InGame;
                     }
@@ -176,6 +174,9 @@ namespace GameWorld
                         {
                             pause = true;
                             gameTime.Equals(5000);
+                            
+                            
+
 
                         }
                  
@@ -206,11 +207,11 @@ namespace GameWorld
 
 
                     }
-
-                    if (Keyboard.GetState().IsKeyDown(Keys.P) && pause == true)
+                    else if (Keyboard.GetState().IsKeyDown(Keys.P) && pause == true)
                     {
                         pause = false;
                     }
+
 
 
 

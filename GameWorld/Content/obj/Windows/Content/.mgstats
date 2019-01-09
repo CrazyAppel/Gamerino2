@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/gothic-hero-run.xnb","TextureProcessor","Texture2DContent",7437,152149,0.1411283
-"D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb","TextureProcessor","Texture2DContent",1636,56533,0.1341214
+"D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/gothic-hero-run.xnb","TextureProcessor","Texture2DContent",7437,152149,0.135122
+"D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb","TextureProcessor","Texture2DContent",1636,56533,0.0020021
 "D:/GitHub/Gamerino2/GameWorld/Content/Player.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.1281276
 "D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.011021
 "D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.007006

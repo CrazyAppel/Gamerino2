@@ -4,10 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>J:/SWAG/Gamerino2/GameWorld/Content/Controls/Button.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Deadaf.wav</File>
-    <File>J:/SWAG/Gamerino2/GameWorld/Content/Fonts/Font.spritefont</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Player.png</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/score.spritefont</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Song.mp3</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Tile1.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Tile2.png</File>
@@ -20,7 +19,6 @@
     <File>J:/SWAG/Gamerino2/GameWorld/Content/WOO.wav</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

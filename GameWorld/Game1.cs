@@ -28,8 +28,8 @@ namespace GameWorld
         GameState _currentGameState;
         private Texture2D _titleScreenTexture, _endGameTexture, _pauseTexture;
         bool pause = false;
-        
-        
+
+        static int pauseint = 0;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -37,6 +37,10 @@ namespace GameWorld
         //SOUNDEFFECTS
         private Song Backgroundmusic;
         private SoundEffect effect, effect2;
+
+        //SCORE
+        private SpriteFont _scorefont;
+        private Score _score;
         
         
         Camera camera;
@@ -45,7 +49,7 @@ namespace GameWorld
         List<Enemy> enemies;
         Coin coin1, coin2;
         List<Coin> coins;
-        Map map;
+        //Map map;
         Player player;
         //bool isDeadly;
         public Game1()
@@ -85,8 +89,8 @@ namespace GameWorld
 
         private void initiateObjects()
         {
-            coin1.position = new Vector2(250, 296);
-            coin2.position = new Vector2(405, 296);
+            coin1.position = new Vector2(405, 296);
+            coin2.position = new Vector2(405, 800);
             enemy1.position = new Vector2(900, 380);
             enemy2.position = new Vector2(100, 380);
             enemy1.speed = 1f;
@@ -124,7 +128,11 @@ namespace GameWorld
             _pauseTexture = Content.Load<Texture2D>("titlescreen");
             _titleScreenTexture = Content.Load<Texture2D>("titlescreen");
             _endGameTexture = Content.Load<Texture2D>("titlescreen");
-            
+
+            //SCORE
+            _scorefont = Content.Load<SpriteFont>("score");
+            _score = new Score(_scorefont);
+
             player.Load(Content);
             foreach (Enemy enemy in enemies)
             {
@@ -170,16 +178,16 @@ namespace GameWorld
 
                     if (!pause)
                     {
-                        if (Keyboard.GetState().IsKeyDown(Keys.P))
+                        if (Keyboard.GetState().IsKeyDown(Keys.P) && pauseint ==0)
                         {
                             pause = true;
-                            gameTime.Equals(5000);
-                            
-                            
+                            pauseint = 1;
 
+                            
 
                         }
-                 
+
+                     
                     player.Update(gameTime);
                     foreach (Enemy enemy in enemies)
                     {
@@ -207,9 +215,15 @@ namespace GameWorld
 
 
                     }
-                    else if (Keyboard.GetState().IsKeyDown(Keys.P) && pause == true)
+                    else if (Keyboard.GetState().IsKeyUp(Keys.P) && pause == true)
                     {
-                        pause = false;
+                        
+                                    pause = false;
+
+                                    pauseint = 0;
+
+
+                        
                     }
 
 
@@ -275,6 +289,7 @@ namespace GameWorld
                     //enemy.Draw(spriteBatch);
                     level.Draw(spriteBatch);
                     player.Draw(spriteBatch);
+                    spriteBatch.DrawString(_scorefont, "score: " + player.score, new Vector2(camera.topLeft.X, camera.topLeft.Y), Color.Black);
                     break;
 
                 case GameState.EndGame:
@@ -287,6 +302,7 @@ namespace GameWorld
             {
                 spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
             }
+            
             
             spriteBatch.End();
 

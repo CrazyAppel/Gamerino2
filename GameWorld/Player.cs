@@ -16,9 +16,11 @@ namespace GameWorld
 
         public int score = 0;
 
+        public bool hasMovement;
+
         private Texture2D texture;
-        private Vector2 position = new Vector2(450,100);
-        private Vector2 velocity;
+        private Vector2 position = new Vector2(1000,150);
+        public Vector2 velocity;
         private Rectangle rectangle;
         public Color[] textureData { get; set; }
         private bool hasJumped = false;
@@ -61,11 +63,13 @@ namespace GameWorld
             {
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
                 looksRight = true;
+                hasMovement = true;
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Left))
             {
                 velocity.X = -(float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
                 looksRight = false;
+                hasMovement = true;
             }
             else
             {
@@ -77,6 +81,7 @@ namespace GameWorld
                 position.Y -= 5f;
                 velocity.Y = -14f;
                 hasJumped = true;
+                hasMovement = true;
             }
         }
 
@@ -97,7 +102,7 @@ namespace GameWorld
             {
 
 
-                if (coin.picked == false) { effect.Play(); score++; } 
+                if (coin.picked == false) { effect.Play(); score++; Score.ScorePoints++; } 
                 
                 coin.picked = true;
             }

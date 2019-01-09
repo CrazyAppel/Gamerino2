@@ -216,9 +216,8 @@ J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\File.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkLeft.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkRight.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkUp.xnb
-J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Fonts\Font.xnb
-J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Controls\Button.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\titlescreen.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Deadaf.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.wma
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\score.xnb

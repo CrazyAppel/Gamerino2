@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-5.png</SourceFile>
-  <SourceTime>2018-06-05T19:03:54+02:00</SourceTime>
-  <DestFile>D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-5.xnb</DestFile>
-  <DestTime>2019-01-07T05:36:29.9757214+01:00</DestTime>
+  <SourceFile>D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png</SourceFile>
+  <SourceTime>2016-10-31T11:45:38+01:00</SourceTime>
+  <DestFile>D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/gothic-hero-run.xnb</DestFile>
+  <DestTime>2019-01-08T04:46:16.620184+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

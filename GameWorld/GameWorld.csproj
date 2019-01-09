@@ -41,13 +41,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Animation.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Coin.cs" />
     <Compile Include="CollisionTiles.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Input.cs" />
     <Compile Include="Managers\AnimationManager.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Models\Animations.cs" />

@@ -205,3 +205,5 @@ D:\GitHub\Gamerino2\GameWorld\obj\x86\Debug\GameWorld.csproj.CoreCompileInputs.c
 D:\GitHub\Gamerino2\GameWorld\obj\x86\Debug\GameWorld.csproj.CopyComplete
 D:\GitHub\Gamerino2\GameWorld\obj\x86\Debug\GameWorld.exe
 D:\GitHub\Gamerino2\GameWorld\obj\x86\Debug\GameWorld.pdb
+D:\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkingRight.xnb
+D:\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\gothic-hero-run.xnb

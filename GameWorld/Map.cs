@@ -44,7 +44,7 @@ namespace GameWorld
                     int number = map[y, x];
 
                     if (number > 0 && number < 3)
-                    {
+                    {                                                                             //64  //64  //64
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false));
                     }
                     if (number == 3)

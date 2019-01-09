@@ -4,6 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Player.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png</File>
@@ -12,6 +14,8 @@
     <File>D:/GitHub/Gamerino2/GameWorld/Content/WOO.wav</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File>WalkingRight.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

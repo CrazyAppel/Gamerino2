@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-3.png</SourceFile>
-  <SourceTime>2018-06-05T19:03:54+02:00</SourceTime>
-  <DestFile>D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Player/hero-run-3.xnb</DestFile>
-  <DestTime>2019-01-07T05:36:29.9717166+01:00</DestTime>
+  <SourceFile>D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png</SourceFile>
+  <SourceTime>2019-01-07T04:17:59.4696593+01:00</SourceTime>
+  <DestFile>D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb</DestFile>
+  <DestTime>2019-01-08T02:30:17.3532881+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

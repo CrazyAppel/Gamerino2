@@ -1,4 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameWorld.Managers;
+using GameWorld.Models;
+using GameWorld.Sprites;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,43 +18,81 @@ namespace GameWorld
     {
 
        
-        private Texture2D texture;
         private Vector2 position = new Vector2(450,100);
         private Vector2 velocity;
         private Rectangle rectangle;
+
+        public Texture2D _TEXTURE;
         public Color[] textureData { get; set; }
         private bool hasJumped = false;
         public bool hasDied = false;
         float rotation = 0f;
         private bool looksRight = false;
         public Vector2 origin;
+
+        protected AnimationManager _animationManager;
+
+        protected Dictionary<string, Animations> _animations;
+
+        protected Vector2 _position;
+
+        protected Texture2D _texture;
+
         public Vector2 Position
         {
             get { return position; }
+            set
+            {
+                position = value;
+
+                if (_animationManager != null)
+                    _animationManager.Position = position;
+            }
         }
 
         public Player() { }
 
         public void Load(ContentManager Content)
         {
-            texture = Content.Load<Texture2D>("Player");
-            textureData = new Color[texture.Width * texture.Height];
-            texture.GetData(textureData);
+            var _animationset = new Dictionary<string, Animations>()
+              {
+                { "WalkLeft", new Animations(Content.Load<Texture2D>("WalkingRight"), 8) },
+                { "WalkRight", new Animations(Content.Load<Texture2D>("WalkingRight"), 8) },
+              };
+
+            _animations = _animationset;
+            _animationManager = new AnimationManager(_animations.First().Value);
+
+            //_animationManager.Position = position;
+
+            textureData = new Color[Constants.TEXTURE.Width * Constants.TEXTURE.Height];
+            Constants.TEXTURE.GetData(textureData);
+
         }
+
+
 
         public void Update(GameTime gameTime)
         {
-            position += velocity;
+            Position += velocity;
             //rectangle = new Rectangle((int)position.X, (int)position.Y, 64, 64);
-            rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+            rectangle = new Rectangle((int)Position.X, (int)Position.Y, 64, 64);
             origin = new Vector2(0, 0);
 
             Movement(gameTime);
+
             if (velocity.Y < 10)
             {
                 hasJumped = true;
                 velocity.Y += 0.7f;
             }
+
+            if (velocity.X > 0)
+                _animationManager.Play(_animations["WalkRight"]);
+            else if (velocity.X < 0)
+                _animationManager.Play(_animations["WalkLeft"]);
+            else _animationManager.Stop();
+            _animationManager.Update(gameTime);
         }
 
         private void Movement(GameTime gameTime)
@@ -157,12 +198,14 @@ namespace GameWorld
             if(looksRight == true)
             {
 
-                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.None, 0f);
+                //spriteBatch.Draw(_animations[_animations.Keys.ElementAt(1)].Texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.None, 0f);
+                _animationManager.Draw(spriteBatch);
             }
             else
             {
 
-                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+                //spriteBatch.Draw(_animations[_animations.Keys.ElementAt(1)].Texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+                _animationManager.Draw(spriteBatch);
             }
 
         }

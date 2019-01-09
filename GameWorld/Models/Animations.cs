@@ -27,6 +27,8 @@ namespace GameWorld.Models
         {
             Texture = texture;
 
+            Constants.TEXTURE = texture;
+
             FrameCount = frameCount;
 
             IsLooping = true;

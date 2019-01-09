@@ -4,28 +4,18 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/File.spritefont</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Player.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-idle-1.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-1.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-2.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-3.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-4.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-5.png</File>
-    <File>D:/GitHub/Gamerino2/GameWorld/Content/Player/hero-run-6.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile4.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/WOO.wav</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
+    <File>WalkingRight.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

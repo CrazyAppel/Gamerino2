@@ -41,12 +41,19 @@ namespace GameWorld
         //SCORE
         private SpriteFont _scorefont;
         private Score _score;
+
+        //background
+        private Camera _camera;
+        Scrolling scrolling1, scrolling2;
         
         
-        Camera camera;
         Map level;
         Enemy enemy1, enemy2;
         List<Enemy> enemies;
+        List<Enemy> enemies2;
+
+       /* Speedyboi enemy3;
+        Slowboi enemy2;*/
         Coin coin1, coin2;
         List<Coin> coins;
         //Map map;
@@ -71,9 +78,11 @@ namespace GameWorld
             
             level = new Map();
             enemies = new List<Enemy>();
+            enemies2 = new List<Enemy>();
             coins = new List<Coin>();
             enemy1 = new Enemy();
             enemy2 = new Enemy();
+           // enemy3 = new Speedyboi(new Vector2(450,150),player,true);
             coin1 = new Coin();
             coin2 = new Coin();
             player = new Player();
@@ -91,12 +100,13 @@ namespace GameWorld
         {
             coin1.position = new Vector2(405, 296);
             coin2.position = new Vector2(405, 800);
-            enemy1.position = new Vector2(900, 380);
-            enemy2.position = new Vector2(100, 380);
+           enemy1.position = new Vector2(900, 380);
+           enemy2.position = new Vector2(100, 380);
             enemy1.speed = 1f;
             enemy2.speed = 2f;
             enemies.Add(enemy1);
-            enemies.Add(enemy2);
+            enemies2.Add(enemy2);
+          //  enemies.Add(enemy3);
             coins.Add(coin1);
             coins.Add(coin2);
         }
@@ -110,7 +120,7 @@ namespace GameWorld
             
             Tiles.Content = Content;
             
-            camera = new Camera(GraphicsDevice.Viewport);
+            
 
             level.Level2();
 
@@ -118,6 +128,11 @@ namespace GameWorld
              effect = Content.Load<SoundEffect>("WOO");
              effect2 = Content.Load<SoundEffect>("Deadaf");
             Backgroundmusic = Content.Load<Song>("Song");
+            //background
+            scrolling1 = new Scrolling(Content.Load<Texture2D>("Background"),new Rectangle(0,0,800,500));
+            scrolling2 = new Scrolling(Content.Load<Texture2D>("Background"), new Rectangle(0, 0, 800, 500));
+            _camera = new Camera(GraphicsDevice.Viewport);
+           
 
             //CHANGE VOLUME VAN GELUIDEN
             MediaPlayer.Volume = 0.03f;
@@ -137,7 +152,12 @@ namespace GameWorld
             foreach (Enemy enemy in enemies)
             {
 
-                enemy.Load(Content);
+                enemy.Load(Content,false,true);
+            }
+            foreach (Enemy enemy in enemies2)
+            {
+
+                enemy.Load(Content,true,false);
             }
             foreach (Coin coin in coins)
             {
@@ -193,6 +213,10 @@ namespace GameWorld
                     {
                         enemy.Update(gameTime, player);
                     }
+                    foreach (Enemy enemy in enemies2)
+                    {
+                        enemy.Update(gameTime, player);
+                    }
                     foreach (Coin coin in coins)
                     {
                         coin.Update(gameTime, player);
@@ -201,6 +225,10 @@ namespace GameWorld
                     
 
                     foreach (Enemy enemy in enemies)
+                    {
+                        player.checkEnemyCollision(enemy, effect2);
+                    }
+                    foreach (Enemy enemy in enemies2)
                     {
                         player.checkEnemyCollision(enemy, effect2);
                     }
@@ -226,7 +254,7 @@ namespace GameWorld
                         
                     }
 
-
+                   
 
 
                     break;
@@ -248,9 +276,12 @@ namespace GameWorld
                 {
                     enemy.Collision(tile.Rectangle, level.Width, level.Height);
                 }
-
+                foreach (Enemy enemy in enemies2)
+                {
+                    enemy.Collision(tile.Rectangle, level.Width, level.Height);
+                }
                 //enemy.Collision(tile.Rectangle, level.Width, level.Height);
-                camera.Update(player.Position, level.Width, level.Height);
+                _camera.Update(player.Position, level.Width, level.Height);
             }
 
             base.Update(gameTime);
@@ -264,16 +295,24 @@ namespace GameWorld
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             
-            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, camera.Transform);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, _camera.Transform);
             
             switch (_currentGameState)
             {
+
                 case GameState.TitleScreen:
                     spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
                     break;
                 case GameState.InGame:
 
+                    //spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), Color.White);
+                    scrolling1.Draw(spriteBatch);
+                    scrolling2.Draw(spriteBatch);
                     foreach (Enemy enemy in enemies)
+                    {
+                        enemy.Draw(spriteBatch);
+                    }
+                    foreach (Enemy enemy in enemies2)
                     {
                         enemy.Draw(spriteBatch);
                     }
@@ -289,7 +328,9 @@ namespace GameWorld
                     //enemy.Draw(spriteBatch);
                     level.Draw(spriteBatch);
                     player.Draw(spriteBatch);
-                    spriteBatch.DrawString(_scorefont, "score: " + player.score, new Vector2(camera.topLeft.X, camera.topLeft.Y), Color.Black);
+                    spriteBatch.DrawString(_scorefont, "score: " + player.score, new Vector2(_camera.topLeft.X, _camera.topLeft.Y), Color.Black);
+
+                    
                     break;
 
                 case GameState.EndGame:

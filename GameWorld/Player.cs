@@ -57,6 +57,7 @@ namespace GameWorld
             }
         }
 
+
         private void Movement(GameTime gameTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
@@ -107,7 +108,7 @@ namespace GameWorld
                 coin.picked = true;
             }
         }
-
+        
         public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly, SoundEffect effect)
         {
             if (rectangle.TouchTopOf(newRectangle))
@@ -196,5 +197,14 @@ namespace GameWorld
             }
             return false;
         }
+
+
+
+
+        /*private static bool IsColliding(Entity a, Entity b)
+        {
+            float radius = a.Radius + b.Radius;
+            return !a.IsExpired && !b.IsExpired && Vector2.DistanceSquared(a.Position, b.Position) < radius * radius;
+        }*/
     }
 }

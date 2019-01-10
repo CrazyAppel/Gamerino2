@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/WalkLeft.png</SourceFile>
-  <SourceTime>2019-01-08T02:03:03.0921297+01:00</SourceTime>
+  <SourceTime>2019-01-10T00:30:03.9092853+01:00</SourceTime>
   <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkLeft.xnb</DestFile>
-  <DestTime>2019-01-08T02:04:40.486106+01:00</DestTime>
+  <DestTime>2019-01-10T00:36:57.9028324+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

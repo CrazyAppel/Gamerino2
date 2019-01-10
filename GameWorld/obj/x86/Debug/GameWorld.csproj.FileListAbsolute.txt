@@ -221,3 +221,6 @@ J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Deadaf.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.wma
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\score.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Ghost2.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Ghost.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Background.xnb

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/Song.mp3</SourceFile>
-  <SourceTime>2019-01-10T00:30:03.9013072+01:00</SourceTime>
+  <SourceTime>2019-01-12T00:04:45.5147363+01:00</SourceTime>
   <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Song.xnb</DestFile>
-  <DestTime>2019-01-11T20:18:01.5504078+01:00</DestTime>
+  <DestTime>2019-01-12T00:53:46.1555047+01:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>SongProcessor</Processor>

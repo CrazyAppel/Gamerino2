@@ -4,6 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/154724738779649641 (1).png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/background.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Deadaf.wav</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Ghost2.png</File>
@@ -21,13 +22,14 @@
     <File>J:/SWAG/Gamerino2/GameWorld/Content/WOO.wav</File>
   </SourceFiles>
   <DestFiles>
+    <File>Tile1.png</File>
     <File>Background.png</File>
     <File xsi:nil="true" />
     <File>Ghost.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
-    <File xsi:nil="true" />
+    <File>Tile11.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

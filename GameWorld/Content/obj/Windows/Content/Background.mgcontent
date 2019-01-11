@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/background.png</SourceFile>
-  <SourceTime>2018-05-30T18:48:40+02:00</SourceTime>
+  <SourceTime>2019-01-12T00:04:45.5167355+01:00</SourceTime>
   <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Content/Background.xnb</DestFile>
-  <DestTime>2019-01-10T05:15:23.1740685+01:00</DestTime>
+  <DestTime>2019-01-12T00:06:45.0280595+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

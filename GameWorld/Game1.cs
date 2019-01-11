@@ -44,7 +44,7 @@ namespace GameWorld
 
         //background
         private Camera _camera;
-        Scrolling scrolling1, scrolling2;
+        Texture2D scrolling2;
         
         
         Map level;
@@ -129,8 +129,7 @@ namespace GameWorld
              effect2 = Content.Load<SoundEffect>("Deadaf");
             Backgroundmusic = Content.Load<Song>("Song");
             //background
-            scrolling1 = new Scrolling(Content.Load<Texture2D>("Background"),new Rectangle(0,0,800,500));
-            scrolling2 = new Scrolling(Content.Load<Texture2D>("Background"), new Rectangle(0, 0, 800, 500));
+            scrolling2 = Content.Load<Texture2D>("Background");
             _camera = new Camera(GraphicsDevice.Viewport);
            
 
@@ -306,8 +305,8 @@ namespace GameWorld
                 case GameState.InGame:
 
                     //spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), Color.White);
-                    scrolling1.Draw(spriteBatch);
-                    scrolling2.Draw(spriteBatch);
+                    spriteBatch.Draw(scrolling2, new Rectangle(0, 0, level.Width, level.Height), Color.White);
+
                     foreach (Enemy enemy in enemies)
                     {
                         enemy.Draw(spriteBatch);

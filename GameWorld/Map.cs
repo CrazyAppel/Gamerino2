@@ -14,8 +14,9 @@ namespace GameWorld
         public bool isDeadly;
        // private Tiles[,] blokArray = new Tiles[8, 18];
         private List<CollisionTiles> collisionTiles = new List<CollisionTiles>();
-        
+
       
+
         public List<CollisionTiles> CollisionTiles
         {
             get { return collisionTiles; }
@@ -32,6 +33,8 @@ namespace GameWorld
         {
             get { return height; }
         }
+
+        public Tiles TileCollision { get; private set; }
 
         public Map() { }
 
@@ -96,7 +99,7 @@ namespace GameWorld
             {
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
                 { 0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0},
                 { 0,0,0,0,0,0,1,2,2,0,0,0,0,0,0,0,1,0,0,0,0},

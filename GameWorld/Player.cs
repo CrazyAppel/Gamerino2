@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using GameWorld.Models;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -13,6 +14,14 @@ namespace GameWorld
 {
     class Player
     {
+        //lotfi collision
+
+        private Animations idleAnimation;
+        public Rectangle localBounds;
+
+
+        //end
+
 
         public int score = 0;
 
@@ -40,6 +49,9 @@ namespace GameWorld
             texture = Content.Load<Texture2D>("Player");
             textureData = new Color[texture.Width * texture.Height];
             texture.GetData(textureData);
+
+
+          
         }
 
         public void Update(GameTime gameTime)
@@ -77,7 +89,7 @@ namespace GameWorld
                 velocity.X = 0f;
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && hasJumped == false)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && hasJumped == false)
             {
                 position.Y -= 5f;
                 velocity.Y = -14f;
@@ -159,6 +171,44 @@ namespace GameWorld
                   }
               }*/
         }
+
+
+
+
+
+
+        public bool IsOnGround
+        {
+            get { return isOnGround; }
+        }
+        bool isOnGround;
+
+        public Rectangle BoundingRectangle
+        {
+            get
+            {
+                int left = (int)Math.Round(Position.X - position.X) + localBounds.X; //origin.x?
+                int top = (int)Math.Round(Position.Y - position.Y) + localBounds.Y;
+
+                return new Rectangle(left, top, localBounds.Width, localBounds.Height);
+            }
+        }
+       
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public void Draw(SpriteBatch spriteBatch)
         {

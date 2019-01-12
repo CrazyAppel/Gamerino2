@@ -14,7 +14,7 @@ namespace GameWorld
     {
         private Texture2D texture;
         public Rectangle rectangle;
-        public Color[] textureData { get; set; }
+        public Color[] TextureData { get; set; }
         public Vector2 position;
         private Vector2 origin;
         public Vector2 velocity;
@@ -29,19 +29,36 @@ namespace GameWorld
         public Enemy() { }
 
 
-        public void Load(ContentManager Content)
+        public void Load(ContentManager Content, bool enemy, bool enemy2)
         {
-            texture = Content.Load<Texture2D>("Player");
-            textureData = new Color[texture.Width * texture.Height];
-            texture.GetData(textureData);
-            distance = 1000;
+            if (enemy == true && enemy2 == false)
+            {
+                texture = Content.Load<Texture2D>("Player");
 
-            oldDistance = distance;
+                TextureData = new Color[texture.Width * texture.Height];
+                texture.GetData(TextureData);
+                distance = 1000;
+
+                oldDistance = distance;
+            }
+            if (enemy == false && enemy2 == true)
+            {
+                texture = Content.Load<Texture2D>("Ghost");
+
+                TextureData = new Color[texture.Width * texture.Height];
+                texture.GetData(TextureData);
+                distance = 1000;
+
+                oldDistance = distance;
+            }
+
+
+
+
         }
-        float playerDistance;
+        protected float playerDistance;
         public void Update(GameTime gameTime, Player player)
         {
-            
             position += velocity;
             rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
             origin = new Vector2(0, 0);
@@ -61,17 +78,15 @@ namespace GameWorld
                 right = false;
                 velocity.X = 0f;
             }
-            if(right)
+            if (right)
             {
-                distance += 1; 
+                distance += 1; // +1
             }
             else
             {
                 distance -= 1;
             }
 
-
-            
             playerDistance = player.Position.X - position.X;
 
             if (playerDistance >= -500 && playerDistance <= 500)
@@ -82,7 +97,7 @@ namespace GameWorld
                 }
                 else if (playerDistance >= 1)
                 {
-                    velocity.X = speed; 
+                    velocity.X = speed;
                 }
                 else if (playerDistance == 0)
                 {
@@ -95,7 +110,7 @@ namespace GameWorld
         {
             if (rectangle.TouchTopOf(newRectangle))
             {
-                rectangle.Y  = newRectangle.Y - rectangle.Height;
+                rectangle.Y = newRectangle.Y - rectangle.Height;
                 velocity.Y = 0f;
             }
 
@@ -131,14 +146,14 @@ namespace GameWorld
             if (velocity.X >= 0 && playerDistance > 0)
             {
                 //spriteBatch.Draw(texture, position, null, Color.Red, rotation, origin, 1f, SpriteEffects.None, 0f);
-                spriteBatch.Draw(texture, rectangle, null, Color.Red, rotation, origin, SpriteEffects.None, 0f);
+                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.None, 0f);
                 //spriteBatch.Draw()
 
             }
             else
             {
                 //spriteBatch.Draw(texture, position, null, Color.Red, rotation, origin, 1f, SpriteEffects.FlipHorizontally, 0f);
-                spriteBatch.Draw(texture, rectangle, null, Color.Red, rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+                spriteBatch.Draw(texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.FlipHorizontally, 0f);
 
             }
         }

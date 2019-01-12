@@ -18,7 +18,7 @@ namespace GameWorld
 
         private Vector2 centre;
         private Viewport viewport;
-
+        public Vector2 topLeft;
         public Camera(Viewport newViewport)
         {
             viewport = newViewport;
@@ -29,29 +29,35 @@ namespace GameWorld
             if (position.X < viewport.Width/2)
             {
                 centre.X = viewport.Width / 2;
+                topLeft.X = viewport.Width / 2 - 400;
             }
             else if (position.X > xOffset - (viewport.Width/2))
             {
                 centre.X = xOffset - (viewport.Width / 2);
+                topLeft.X = xOffset - (viewport.Width / 2) - 400;
             }
             else
             {
-                centre.X = position.X;  
+                centre.X = position.X;
+                topLeft.X = position.X - 400;
             }
 
             if (position.Y < viewport.Height / 2)
             {
                 centre.Y = viewport.Height / 2;
+                topLeft.Y = (viewport.Height / 2) - 240;
             }
             else if (position.Y > yOffset - (viewport.Height / 2))
             {
                 centre.Y = yOffset - (viewport.Height / 2);
+                topLeft.Y = yOffset - (viewport.Height / 2) - 240;
             }
             else
             {
                 centre.Y = position.Y;
+                topLeft.Y = position.Y - 240;
             }
-
+            
             transform = Matrix.CreateTranslation(new Vector3(-centre.X + (viewport.Width / 2), -centre.Y + (viewport.Height / 2), 0));
         }
     }

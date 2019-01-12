@@ -13,6 +13,7 @@ namespace GameWorld
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        public SpriteFont font;
 
         //SOUNDEFFECTS
         SoundEffect effect;
@@ -77,6 +78,7 @@ namespace GameWorld
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            font = Content.Load<SpriteFont>("font"); // Use the name of your sprite font file here instead of 'Score'.
             IsMouseVisible = true;
             //enemy = new Enemy(Content.Load<Texture2D>("Player"), new Vector2(900, 384), 1000);
             

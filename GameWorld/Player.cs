@@ -19,8 +19,10 @@ namespace GameWorld
 
        
         private Vector2 position = new Vector2(450,100);
+        private SpriteFont font;
         private Vector2 velocity;
         private Rectangle rectangle;
+        private Vector2 debugPos;
         IEnumerable<int> offsetXY = Enumerable.Range(-3, 3);
 
         public Texture2D _TEXTURE;
@@ -62,7 +64,7 @@ namespace GameWorld
                 { "JumpRight", new Animations(Content.Load<Texture2D>("playerJump"), 4, false) },
                 { "JumpLeft", new Animations(Content.Load<Texture2D>("playerJump"), 4, true) }
               };
-
+            font = Content.Load<SpriteFont>("font");
             _animations = _animationset;
             _animationManager = new AnimationManager(_animations.First().Value);
 
@@ -83,6 +85,8 @@ namespace GameWorld
             origin = new Vector2(0, 0);
             _animationManager.Update(gameTime);
             Movement(gameTime);
+            debugPos.X = Position.X;
+            debugPos.Y = Position.Y - 50;
 
             if (velocity.Y < 10)
             {
@@ -134,7 +138,9 @@ namespace GameWorld
                 hasJumped = true;
             }
 
-            /*if (Keyboard.GetState().IsKeyDown(Keys.Right) && hasJumped == true)
+
+
+                /*if (Keyboard.GetState().IsKeyDown(Keys.Right) && hasJumped == true)
             {
                 _animationManager.Play(_animations["JumpRight"]);
             }
@@ -222,8 +228,12 @@ namespace GameWorld
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                spriteBatch.DrawString(font, Position.ToString(), debugPos, Color.Black);
+            }
             //spriteBatch.Draw(texture, rectangle, Color.White);
-            if(looksRight == true)
+            if (looksRight == true)
             {
 
                 //spriteBatch.Draw(_animations[_animations.Keys.ElementAt(1)].Texture, rectangle, null, Color.White, rotation, origin, SpriteEffects.None, 0f);

@@ -37,7 +37,7 @@ namespace GameWorld.Models
 
             IsLooping = true;
 
-            FrameSpeed = 0.2f;
+            FrameSpeed = 0.5f;
         }
     }
 }

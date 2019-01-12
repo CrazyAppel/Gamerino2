@@ -6,8 +6,10 @@
   <SourceFiles>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/font.spritefont</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/gothic-hero-run.png</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/jump.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/knight walk animation.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Player.png</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/playerIdle.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerJump.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerRun.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/resizedPRun.png</File>
@@ -20,7 +22,9 @@
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File>WalkingRight.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

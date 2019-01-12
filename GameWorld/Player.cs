@@ -18,7 +18,7 @@ namespace GameWorld
     {
 
        
-        private Vector2 position = new Vector2(450,100);
+        private Vector2 position = new Vector2(455,127);
         private SpriteFont font;
         private Vector2 velocity;
         private Rectangle rectangle;
@@ -61,8 +61,10 @@ namespace GameWorld
               {
                 { "WalkLeft", new Animations(Content.Load<Texture2D>("playerRun"), 6, true) },
                 { "WalkRight", new Animations(Content.Load<Texture2D>("playerRun"), 6, false) },
-                { "JumpRight", new Animations(Content.Load<Texture2D>("playerJump"), 4, false) },
-                { "JumpLeft", new Animations(Content.Load<Texture2D>("playerJump"), 4, true) }
+                { "JumpRight", new Animations(Content.Load<Texture2D>("Jump"), 1, false) },
+                { "JumpLeft", new Animations(Content.Load<Texture2D>("Jump"), 1, true) },
+                { "IdleLeft", new Animations(Content.Load<Texture2D>("playerIdle"), 4, true) },
+                { "IdleRight", new Animations(Content.Load<Texture2D>("playerIdle"), 4, false) }
               };
             font = Content.Load<SpriteFont>("font");
             _animations = _animationset;
@@ -88,29 +90,61 @@ namespace GameWorld
             debugPos.X = Position.X;
             debugPos.Y = Position.Y - 50;
 
-            if (velocity.Y < 10)
+            if (velocity.Y < 9.81)
             {
-                hasJumped = true;
                 velocity.Y += 0.7f;
+                hasJumped = true;
+                if ((velocity.Y + 0.7f) > 9.81f)
+                {
+                    velocity.Y = 9.81f;
+                }   
             }
-            foreach(var number in offsetXY)
+
+
+            // zonder (int) is velocity -1 tot 1
+            if (velocity.X > 0 && (int)velocity.Y == 0)
             {
-                if (velocity.Y != number)
+                _animationManager.Play(_animations["WalkRight"]);
+            }
+                                  
+            if (velocity.X < 0 && (int)velocity.Y == 0)
+            {
+                _animationManager.Play(_animations["WalkLeft"]);
+            }
+
+            if (velocity.X < 0 && (int)velocity.Y != 0 && hasJumped)
+            {
+                _animationManager.Play(_animations["JumpLeft"]);
+
+            }
+            if (velocity.X > 0 && (int)velocity.Y != 0 && hasJumped)
+            {
+                _animationManager.Play(_animations["JumpRight"]);
+
+            }
+            if (velocity.X == 0 && (int)velocity.Y == 0)
+            { 
+                if (looksRight)
+                {
+                    _animationManager.Play(_animations["IdleRight"]);
+                }
+                else
+                {
+                    _animationManager.Play(_animations["IdleLeft"]);
+                }
+            }
+            if (velocity.X == 0 && (int)velocity.Y != 0 && hasJumped)
+            {
+                if (looksRight)
+                {
+                    _animationManager.Play(_animations["JumpRight"]);
+                }
+                else
                 {
                     _animationManager.Play(_animations["JumpLeft"]);
                 }
             }
 
-            
-
-            if (velocity.X > 0)
-            {
-                    _animationManager.Play(_animations["WalkRight"]);
-            }
-                
-            else if (velocity.X < 0)
-                _animationManager.Play(_animations["WalkLeft"]);
-            else _animationManager.Stop();
             
         }
 
@@ -118,6 +152,7 @@ namespace GameWorld
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
+
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
                 looksRight = true;
             }
@@ -187,11 +222,11 @@ namespace GameWorld
 
             if (rectangle.TouchLeftOf(newRectangle))
             {
-                position.X = newRectangle.X - rectangle.Width - 2; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
+                position.X = newRectangle.X - rectangle.Width - 20; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
             }
             if (rectangle.TouchRightOf(newRectangle))
             {
-                position.X = newRectangle.X + rectangle.Width + 8; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
+                position.X = newRectangle.X + rectangle.Width + 40; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
             }
             if (rectangle.TouchBottomOf(newRectangle))
             {
@@ -230,7 +265,7 @@ namespace GameWorld
         {
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                spriteBatch.DrawString(font, Position.ToString(), debugPos, Color.Black);
+                spriteBatch.DrawString(font, velocity.ToString() + " | " + position.ToString() + " | " + hasJumped.ToString()/*velocity.ToString()*/, debugPos, Color.Black);
             }
             //spriteBatch.Draw(texture, rectangle, Color.White);
             if (looksRight == true)

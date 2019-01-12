@@ -3,7 +3,7 @@
   <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/WOO.wav</SourceFile>
   <SourceTime>2019-01-12T00:04:18.3488048+01:00</SourceTime>
   <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Content/WOO.xnb</DestFile>
-  <DestTime>2019-01-12T01:50:54.4945669+01:00</DestTime>
+  <DestTime>2019-01-12T02:15:35.2725557+01:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

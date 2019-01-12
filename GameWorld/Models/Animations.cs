@@ -19,7 +19,7 @@ namespace GameWorld.Models
 
         public int FrameWidth { get { return Texture.Width / FrameCount; } }
 
-        public bool IsLooping { get; set; }
+       // public bool IsLooping { get; set; }
 
         public bool FlipImage { get; private set; }
 
@@ -35,9 +35,9 @@ namespace GameWorld.Models
 
             FrameCount = frameCount;
 
-            IsLooping = true;
+           // IsLooping = true;
 
-            FrameSpeed = 0.5f;
+            FrameSpeed = 0.1f;
         }
     }
 }

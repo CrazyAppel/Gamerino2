@@ -224,3 +224,5 @@ J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerRun.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\resizedPRun.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkingRight.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\font.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerIdle.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\jump.xnb

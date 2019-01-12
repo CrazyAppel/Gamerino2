@@ -14,6 +14,8 @@ namespace GameWorld.Managers
         private Animations _animation;
         private float _timer;
         public Vector2 Position { get; set; }
+        public bool isPlaying;
+
 
         public AnimationManager(Animations animation)
         {
@@ -35,6 +37,7 @@ namespace GameWorld.Managers
 
         public void Play(Animations animation)
         {
+            isPlaying = true;
             if (_animation == animation)
                 return;
 
@@ -45,6 +48,7 @@ namespace GameWorld.Managers
         }
         public void Stop()
         {
+            isPlaying = false;
             _timer = 0f;
 
             _animation.CurrentFrame = 0;

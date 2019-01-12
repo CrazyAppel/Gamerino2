@@ -31,7 +31,7 @@ namespace GameWorld
         
         public void Update(GameTime gameTime, Player player)
         {
-            rectangle = new Rectangle((int)position.X, (int)position.Y, 25, 25);
+            rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
         }
 
        

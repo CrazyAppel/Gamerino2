@@ -14,7 +14,7 @@ namespace GameWorld.Managers
         private Animations _animation;
         private float _timer;
         public Vector2 Position { get; set; }
-        public bool isPlaying;
+        public bool isPlaying = false;
 
 
         public AnimationManager(Animations animation)
@@ -37,7 +37,11 @@ namespace GameWorld.Managers
 
         public void Play(Animations animation)
         {
-            isPlaying = true;
+            if (_animation.isAttacking == true)
+            {
+                isPlaying = true;
+                _animation.FrameSpeed = 0.1f;
+            }
             if (_animation == animation)
                 return;
 
@@ -48,7 +52,6 @@ namespace GameWorld.Managers
         }
         public void Stop()
         {
-            isPlaying = false;
             _timer = 0f;
 
             _animation.CurrentFrame = 0;
@@ -65,7 +68,19 @@ namespace GameWorld.Managers
                 _animation.CurrentFrame++;
 
                 if (_animation.CurrentFrame >= _animation.FrameCount)
+                { 
                     _animation.CurrentFrame = 0;
+                    isPlaying = false;
+                }
+                /*else if (_animation.CurrentFrame >= _animation.FrameCount && _animation.isAttacking == true)
+                {
+                    _animation.CurrentFrame -= 1;
+                    if (_animation.CurrentFrame <= 0)
+                    {
+                        isPlaying = false;
+                        Stop();
+                    }
+                }*/
             }
         }
     }

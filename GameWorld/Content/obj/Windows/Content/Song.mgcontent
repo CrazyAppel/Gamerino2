@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/Song.mp3</SourceFile>
+  <SourceTime>2019-01-12T06:59:34.1247574+01:00</SourceTime>
+  <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Content/Song.xnb</DestFile>
+  <DestTime>2019-01-12T07:00:18.5697604+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-09-23T23:55:52+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/Content/Song.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

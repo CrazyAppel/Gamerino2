@@ -222,7 +222,6 @@ J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\gothic-hero-run.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerJump.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerRun.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\resizedPRun.xnb
-J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\WalkingRight.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\font.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerIdle.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\jump.xnb
@@ -294,3 +293,11 @@ C:\Users\kruys\Documents\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\SharpD
 C:\Users\kruys\Documents\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\kruys\Documents\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
 C:\Users\kruys\Documents\GitHub\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Ghost.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\background.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Deadaf.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Ghost.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\score.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.wma
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\titlescreen.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerAttack.xnb

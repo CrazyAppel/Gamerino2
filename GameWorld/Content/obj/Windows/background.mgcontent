@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/kruys/Documents/GitHub/Gamerino2/GameWorld/Content/background.png</SourceFile>
-  <SourceTime>2019-01-12T02:18:35.6481279+01:00</SourceTime>
-  <DestFile>C:/Users/kruys/Documents/GitHub/Gamerino2/GameWorld/Content/bin/Windows/background.xnb</DestFile>
-  <DestTime>2019-01-12T06:37:07.0458533+01:00</DestTime>
+  <SourceFile>J:/SWAG/Gamerino2/GameWorld/Content/background.png</SourceFile>
+  <SourceTime>2019-01-12T06:59:34.1347306+01:00</SourceTime>
+  <DestFile>J:/SWAG/Gamerino2/GameWorld/Content/bin/Windows/background.xnb</DestFile>
+  <DestTime>2019-01-12T09:33:30.1124961+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
+  <ProcessorTime>2018-09-23T23:55:52+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

@@ -21,6 +21,7 @@ namespace GameWorld
             get { return collisionTiles; }
 
         }
+        
 
         private int width, height;
         public int Width
@@ -45,15 +46,20 @@ namespace GameWorld
 
                     if (number > 0 && number < 3)
                     {                                                                             //64  //64  //64
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false, "none"));
+                       /* collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, (y * size)-1, size, 1), isDeadly = false, "top"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, (y * size)+1, size, 1), isDeadly = false, "bottom"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle((x * size)-1, y * size, 1, size), isDeadly = false, "left"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle((x * size)+1, y * size, 1, size), isDeadly = false, "right"));*/
+
                     }
                     if (number == 3)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true, "none"));
                     }
                     if (number == 4)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false, "none"));
                     }
 
 

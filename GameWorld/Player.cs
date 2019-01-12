@@ -22,6 +22,10 @@ namespace GameWorld
         private SpriteFont font;
         private Vector2 velocity;
         private Rectangle rectangle;
+        private Rectangle boundTop;
+        private Rectangle boundBottom;
+        private Rectangle boundLeft;
+        private Rectangle boundRight;
         private Vector2 debugPos;
         IEnumerable<int> offsetXY = Enumerable.Range(-3, 3);
 
@@ -40,6 +44,7 @@ namespace GameWorld
         protected Vector2 _position;
 
         protected Texture2D _texture;
+        public bool isAttacking = false;
 
         public Vector2 Position
         {
@@ -59,12 +64,14 @@ namespace GameWorld
         {
             var _animationset = new Dictionary<string, Animations>()
               {
-                { "WalkLeft", new Animations(Content.Load<Texture2D>("playerRun"), 6, true) },
-                { "WalkRight", new Animations(Content.Load<Texture2D>("playerRun"), 6, false) },
-                { "JumpRight", new Animations(Content.Load<Texture2D>("Jump"), 1, false) },
-                { "JumpLeft", new Animations(Content.Load<Texture2D>("Jump"), 1, true) },
-                { "IdleLeft", new Animations(Content.Load<Texture2D>("playerIdle"), 4, true) },
-                { "IdleRight", new Animations(Content.Load<Texture2D>("playerIdle"), 4, false) }
+                { "WalkLeft", new Animations(Content.Load<Texture2D>("playerRun"), 6, true, false) },
+                { "WalkRight", new Animations(Content.Load<Texture2D>("playerRun"), 6, false, false) },
+                { "JumpRight", new Animations(Content.Load<Texture2D>("Jump"), 1, false, false) },
+                { "JumpLeft", new Animations(Content.Load<Texture2D>("Jump"), 1, true, false) },
+                { "IdleLeft", new Animations(Content.Load<Texture2D>("playerIdle"), 4, true, false) },
+                { "IdleRight", new Animations(Content.Load<Texture2D>("playerIdle"), 4, false, false) },
+                { "AttackLeft", new Animations(Content.Load<Texture2D>("playerAttack"), 5, true, true) },
+                { "AttackRight", new Animations(Content.Load<Texture2D>("playerAttack"), 5, false, true) }
               };
             font = Content.Load<SpriteFont>("font");
             _animations = _animationset;
@@ -84,8 +91,13 @@ namespace GameWorld
             Position += velocity;
             //rectangle = new Rectangle((int)position.X, (int)position.Y, 64, 64);
             rectangle = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
+            boundTop = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
+            boundBottom = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
+            boundLeft = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
+            boundRight = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
             origin = new Vector2(0, 0);
             _animationManager.Update(gameTime);
+            //Attack(gameTime);
             Movement(gameTime);
             debugPos.X = Position.X;
             debugPos.Y = Position.Y - 50;
@@ -148,9 +160,31 @@ namespace GameWorld
             
         }
 
+        private void Attack()
+        {
+            if (!_animationManager.isPlaying)
+            {
+                velocity.X = 0f;
+                velocity.Y = 0f;
+                if (looksRight)
+                {
+                    _animationManager.Play(_animations["AttackRight"]);
+                }
+                else
+                {
+                    _animationManager.Play(_animations["AttackLeft"]);
+                }
+            }
+        }
         private void Movement(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                if (Keyboard.GetState().IsKeyDown(Keys.LeftControl))
+                {
+                    //isAttacking = true;
+                    Attack();
+                }
+            
+                if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
 
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
@@ -191,7 +225,7 @@ namespace GameWorld
 
         public void checkEnemyCollision(Enemy enemy, SoundEffect effect)
         {
-            if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.textureData))
+            if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.TextureData))
             {
                 //snowball.IsRemoved = true;
                 //hasDied = true;
@@ -223,15 +257,19 @@ namespace GameWorld
 
             if (rectangle.TouchLeftOf(newRectangle))
             {
-                position.X = newRectangle.X - rectangle.Width - 20; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
+                position.X = newRectangle.X - rectangle.Width - 2; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
             }
             if (rectangle.TouchRightOf(newRectangle))
             {
-                position.X = newRectangle.X + rectangle.Width + 40; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
+                position.X = newRectangle.X + rectangle.Width + 8; // moet niet 2 zijn verander dit als je problemen hebt. hangt af van sprite.
             }
             if (rectangle.TouchBottomOf(newRectangle))
             {
                 velocity.Y = 1f;
+            }
+            if (rectangle.TouchBottomOf(newRectangle) && velocity.Y == 0)
+            {
+                hasJumped = true;
             }
 
             /*if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.textureData))

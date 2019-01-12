@@ -23,13 +23,17 @@ namespace GameWorld.Models
 
         public bool FlipImage { get; private set; }
 
+        public bool isAttacking { get; private set; }
+
         public Texture2D Texture { get; private set; }
 
-        public Animations(Texture2D texture, int frameCount, bool flipImage)
+        public Animations(Texture2D texture, int frameCount, bool flipImage, bool isAttack)
         {
             Texture = texture;
 
             FlipImage = flipImage;
+
+            isAttacking = isAttack;
 
             Constants.TEXTURE = texture;
 

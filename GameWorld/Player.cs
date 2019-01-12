@@ -21,6 +21,7 @@ namespace GameWorld
         private Vector2 position = new Vector2(450,100);
         private Vector2 velocity;
         private Rectangle rectangle;
+        IEnumerable<int> offsetXY = Enumerable.Range(-3, 3);
 
         public Texture2D _TEXTURE;
         public Color[] textureData { get; set; }
@@ -56,8 +57,10 @@ namespace GameWorld
         {
             var _animationset = new Dictionary<string, Animations>()
               {
-                { "WalkLeft", new Animations(Content.Load<Texture2D>("WalkingRight"), 8) },
-                { "WalkRight", new Animations(Content.Load<Texture2D>("WalkingRight"), 8) },
+                { "WalkLeft", new Animations(Content.Load<Texture2D>("playerRun"), 6, true) },
+                { "WalkRight", new Animations(Content.Load<Texture2D>("playerRun"), 6, false) },
+                { "JumpRight", new Animations(Content.Load<Texture2D>("playerJump"), 4, false) },
+                { "JumpLeft", new Animations(Content.Load<Texture2D>("playerJump"), 4, true) }
               };
 
             _animations = _animationset;
@@ -76,9 +79,9 @@ namespace GameWorld
         {
             Position += velocity;
             //rectangle = new Rectangle((int)position.X, (int)position.Y, 64, 64);
-            rectangle = new Rectangle((int)Position.X, (int)Position.Y, 64, 64);
+            rectangle = new Rectangle((int)Position.X, (int)Position.Y, Constants.TEXTURE.Width / 6, Constants.TEXTURE.Height);
             origin = new Vector2(0, 0);
-
+            _animationManager.Update(gameTime);
             Movement(gameTime);
 
             if (velocity.Y < 10)
@@ -86,13 +89,25 @@ namespace GameWorld
                 hasJumped = true;
                 velocity.Y += 0.7f;
             }
+            foreach(var number in offsetXY)
+            {
+                if (velocity.Y != number)
+                {
+                    _animationManager.Play(_animations["JumpLeft"]);
+                }
+            }
+
+            
 
             if (velocity.X > 0)
-                _animationManager.Play(_animations["WalkRight"]);
+            {
+                    _animationManager.Play(_animations["WalkRight"]);
+            }
+                
             else if (velocity.X < 0)
                 _animationManager.Play(_animations["WalkLeft"]);
             else _animationManager.Stop();
-            _animationManager.Update(gameTime);
+            
         }
 
         private void Movement(GameTime gameTime)
@@ -118,6 +133,19 @@ namespace GameWorld
                 velocity.Y = -14f;
                 hasJumped = true;
             }
+
+            /*if (Keyboard.GetState().IsKeyDown(Keys.Right) && hasJumped == true)
+            {
+                _animationManager.Play(_animations["JumpRight"]);
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left) && hasJumped == true)
+            {
+                _animationManager.Play(_animations["JumpLeft"]);
+            }
+            else if (!Keyboard.GetState().IsKeyDown(Keys.Left) && Keyboard.GetState().IsKeyDown(Keys.Right) && hasJumped == true)
+            {
+                
+            }*/
         }
 
         public void checkEnemyCollision(Enemy enemy)
@@ -137,7 +165,6 @@ namespace GameWorld
                
                 
                 if (coin.picked == false) effect.Play();
-                if (coin.picked == true);
                 coin.picked = true;
             }
         }
@@ -147,6 +174,7 @@ namespace GameWorld
             if (rectangle.TouchTopOf(newRectangle))
             {
                 rectangle.Y = newRectangle.Y - rectangle.Height;
+
                 velocity.Y = 0f;
                 hasJumped = false;
             }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png</SourceFile>
-  <SourceTime>2019-01-09T01:10:12.1303912+01:00</SourceTime>
+  <SourceTime>2019-01-10T02:26:19.187433+01:00</SourceTime>
   <DestFile>D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb</DestFile>
-  <DestTime>2019-01-09T01:10:24.814246+01:00</DestTime>
+  <DestTime>2019-01-10T02:26:36.9275804+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -22,7 +22,15 @@ namespace GameWorld.Managers
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_animation.Texture, Position, new Rectangle(_animation.CurrentFrame * _animation.FrameWidth, 0, _animation.FrameWidth, _animation.FrameHeight), Color.White, 0, new Vector2(0, 0), new Vector2(1.58f, 1.86f), SpriteEffects.None,0);
+            if (_animation.FlipImage)
+            {
+                spriteBatch.Draw(_animation.Texture, Position, new Rectangle(_animation.CurrentFrame * _animation.FrameWidth, 0, _animation.FrameWidth, _animation.FrameHeight), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.FlipHorizontally, 0);
+            }
+            else
+            {
+                spriteBatch.Draw(_animation.Texture, Position, new Rectangle(_animation.CurrentFrame * _animation.FrameWidth, 0, _animation.FrameWidth, _animation.FrameHeight), Color.White, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0);
+            }
+            
         }
 
         public void Play(Animations animation)

@@ -7,6 +7,9 @@
     <File>D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Player.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/playerJump.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/playerRun.png</File>
+    <File>D:/GitHub/Gamerino2/GameWorld/Content/resizedPRun.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png</File>
     <File>D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png</File>
@@ -16,6 +19,9 @@
   <DestFiles>
     <File xsi:nil="true" />
     <File>WalkingRight.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

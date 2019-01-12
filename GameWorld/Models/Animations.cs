@@ -21,11 +21,15 @@ namespace GameWorld.Models
 
         public bool IsLooping { get; set; }
 
+        public bool FlipImage { get; private set; }
+
         public Texture2D Texture { get; private set; }
 
-        public Animations(Texture2D texture, int frameCount)
+        public Animations(Texture2D texture, int frameCount, bool flipImage)
         {
             Texture = texture;
+
+            FlipImage = flipImage;
 
             Constants.TEXTURE = texture;
 

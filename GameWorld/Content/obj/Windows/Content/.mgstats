@@ -1,9 +1,12 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/gothic-hero-run.xnb","TextureProcessor","Texture2DContent",7437,152149,0.135122
-"D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb","TextureProcessor","Texture2DContent",1636,56533,0.0020021
-"D:/GitHub/Gamerino2/GameWorld/Content/Player.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.1281276
-"D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.011021
-"D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.007006
-"D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile3.xnb","TextureProcessor","Texture2DContent",1894,65621,0.0020023
-"D:/GitHub/Gamerino2/GameWorld/Content/Tile4.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile4.xnb","TextureProcessor","Texture2DContent",11944,67685,0.0030028
-"D:/GitHub/Gamerino2/GameWorld/Content/WOO.wav","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WOO.xnb","SoundEffectProcessor","SoundEffectContent",83066,83049,0.1694621
+"D:/GitHub/Gamerino2/GameWorld/Content/gothic-hero-run.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/gothic-hero-run.xnb","TextureProcessor","Texture2DContent",7437,152149,0.1341313
+"D:/GitHub/Gamerino2/GameWorld/Content/knight walk animation.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WalkingRight.xnb","TextureProcessor","Texture2DContent",1636,56533,0.0020025
+"D:/GitHub/Gamerino2/GameWorld/Content/Player.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Player.xnb","TextureProcessor","Texture2DContent",876,16325,0.0020022
+"D:/GitHub/Gamerino2/GameWorld/Content/playerJump.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/playerJump.xnb","TextureProcessor","Texture2DContent",21674,65045,0.1311305
+"D:/GitHub/Gamerino2/GameWorld/Content/playerRun.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/playerRun.xnb","TextureProcessor","Texture2DContent",33705,97525,0.1281164
+"D:/GitHub/Gamerino2/GameWorld/Content/resizedPRun.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/resizedPRun.xnb","TextureProcessor","Texture2DContent",14444,97525,0.1271403
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile1.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile1.xnb","TextureProcessor","Texture2DContent",7769,262229,0.0090077
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile2.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile2.xnb","TextureProcessor","Texture2DContent",6036,262229,0.0070063
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile3.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile3.xnb","TextureProcessor","Texture2DContent",1894,65621,0.002003
+"D:/GitHub/Gamerino2/GameWorld/Content/Tile4.png","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/Tile4.xnb","TextureProcessor","Texture2DContent",11944,67685,0.0020011
+"D:/GitHub/Gamerino2/GameWorld/Content/WOO.wav","D:/GitHub/Gamerino2/GameWorld/Content/bin/Windows/Content/WOO.xnb","SoundEffectProcessor","SoundEffectContent",83066,83049,0.1611482

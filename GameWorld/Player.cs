@@ -18,7 +18,8 @@ namespace GameWorld
     {
         public int score = 0;
 
-        private Vector2 position = new Vector2(455,127);
+        public Vector2 position = new Vector2(0,377);
+        public Vector2 spawn = new Vector2(0, 377);
         private SpriteFont font;
         private Vector2 velocity;
         private Rectangle rectangle;
@@ -111,7 +112,12 @@ namespace GameWorld
                     velocity.Y = 9.81f;
                 }   
             }
-
+            if (hasDied==true)
+            {
+                position = new Vector2(100, 100);
+                
+                hasDied = false;
+            }
 
             // zonder (int) is velocity -1 tot 1
             if (velocity.X > 0 && (int)velocity.Y == 0)
@@ -200,7 +206,7 @@ namespace GameWorld
                 velocity.X = 0f;
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && hasJumped == false)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && hasJumped == false)
             {
                 position.Y -= 5f;
                 velocity.Y = -14f;
@@ -228,11 +234,15 @@ namespace GameWorld
             if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.TextureData))
             {
                 //snowball.IsRemoved = true;
-                //hasDied = true;
-                position = new Vector2(450, 100);
+               hasDied = true;
+              //  position = new Vector2(450, 100);
                 effect.Play();
             }
         }
+
+
+        
+
 
         public void checkCoinColision(Coin coin, SoundEffect effect)
         {
@@ -245,7 +255,7 @@ namespace GameWorld
             }
         }
 
-        public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly, SoundEffect effect)
+        public void Collision(Rectangle newRectangle, int xOffset, int Yoffset, bool isDeadly,bool isEnd, SoundEffect effect)
         {
             if (rectangle.TouchTopOf(newRectangle))
             {
@@ -283,7 +293,11 @@ namespace GameWorld
                 position = new Vector2(450, 100);
                 effect.Play();
             }
-            
+            if (isEnd == true && (rectangle.TouchTopOf(newRectangle) || rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle) || rectangle.TouchBottomOf(newRectangle)))
+            {
+                position = new Vector2(450, 100);
+                effect.Play();
+            }
 
 
             if (position.X < 0) position.X = 0;
@@ -304,7 +318,7 @@ namespace GameWorld
         {
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
-                spriteBatch.DrawString(font, velocity.ToString() + " | " + position.ToString() + " | " + hasJumped.ToString()/*velocity.ToString()*/, debugPos, Color.Black);
+                spriteBatch.DrawString(font, velocity.ToString() + " | " + (position.X - +11).ToString() +" | " + (position.Y + 29).ToString() + " | " + hasJumped.ToString()/*velocity.ToString()*/, debugPos, Color.White);
             }
             //spriteBatch.Draw(texture, rectangle, Color.White);
             if (looksRight == true)

@@ -10,7 +10,7 @@ namespace GameWorld
 {
     class CollisionTiles : Tiles
     {
-        public CollisionTiles(int tileId, Rectangle newRectangle, bool isDeadly, string side)
+        public CollisionTiles(int tileId, Rectangle newRectangle, bool isDeadly,bool isEnd, string side)
         {
             
             if (isDeadly == true)
@@ -21,6 +21,11 @@ namespace GameWorld
                 newRectangle.Height = texture.Height;
                 newRectangle.Width = 64;
                 newRectangle.Location = new Point(newRectangle.Location.X, newRectangle.Location.Y + (64-texture.Height));
+                this.Rectangle = newRectangle;
+            }
+            if (isEnd == true)
+            {
+                texture = Content.Load<Texture2D>("Tile" + tileId);
                 this.Rectangle = newRectangle;
             }
             else

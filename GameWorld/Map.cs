@@ -12,6 +12,8 @@ namespace GameWorld
     {
         public Texture2D texture;
         public bool isDeadly;
+        private bool isEnd;
+        public bool isLevel1 = true;
        // private Tiles[,] blokArray = new Tiles[8, 18];
         private List<CollisionTiles> collisionTiles = new List<CollisionTiles>();
         
@@ -46,7 +48,7 @@ namespace GameWorld
 
                     if (number > 0 && number < 3)
                     {                                                                             //64  //64  //64
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false, "none"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = false, isEnd=false, "none"));
                        /* collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, (y * size)-1, size, 1), isDeadly = false, "top"));
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, (y * size)+1, size, 1), isDeadly = false, "bottom"));
                         collisionTiles.Add(new CollisionTiles(number, new Rectangle((x * size)-1, y * size, 1, size), isDeadly = false, "left"));
@@ -55,11 +57,11 @@ namespace GameWorld
                     }
                     if (number == 3)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true, "none"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size, y * size, size, size), isDeadly = true, isEnd = false, "none"));
                     }
                     if (number == 4)
                     {
-                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false, "none"));
+                        collisionTiles.Add(new CollisionTiles(number, new Rectangle(x * size+20, y * size+39,25,25), isDeadly = false, isEnd = true, "none"));
                     }
 
 
@@ -87,20 +89,26 @@ namespace GameWorld
 
         public void Level1()
         {
+            isLevel1 = true;
             Generate(new int[,]
             {
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-                { 0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0},
-                { 0,0,0,0,0,0,1,2,2,0,1,0,0,0,0,0,0,0},
-                { 0,0,1,0,0,1,2,2,2,0,0,0,0,0,0,0,1,0},
-                { 1,2,2,3,3,2,2,2,2,2,2,2,3,2,1,3,2,1},
+                
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0},
+                { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,2,0,0,1,1,1,1,1,1,0,0,0,0},
+                { 0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,1,0,0,0,0,0,0,2,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,2,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,3,3,1,1,3,2,0,0,0,0,0,1,0,2,0,1,0,0},
+                { 0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,0,0,2,2,2,2,2,2,1,0,0,0,0,0,1,2,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0},
+                { 0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0},
+                { 1,1,1,3,3,3,3,1,2,2,3,3,3,3,3,1,3,3,3,3,3,3,3,1,3,3,3,1,2,2,2,2,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,1},
             }, 64);
         }
         public void Level2()
         {
+            isLevel1 = false;
             Generate(new int[,]
             {
                 { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -121,6 +129,12 @@ namespace GameWorld
 
 
             }, 64);
+        }
+        public void Changelevel()
+        {
+           
+            CollisionTiles.Clear();
+           // 
         }
     }
 }

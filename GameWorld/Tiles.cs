@@ -15,7 +15,7 @@ namespace GameWorld
 
         public Texture2D texture;
         public bool isDeadly;
-
+        public bool isEnd;
         private Rectangle rectangle;
         public Rectangle Rectangle
         {

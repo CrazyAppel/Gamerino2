@@ -18,10 +18,10 @@ namespace GameWorld
             InGame,
             EndGame,
             GameOver,
-            PauseGame
+         //   PauseGame
         }
         GameState _currentGameState;
-        private Texture2D _titleScreenTexture, _endGameTexture, _pauseTexture;
+        private Texture2D _titleScreenTexture, _endGameTexture;//, _pauseTexture;
 
 
         GraphicsDeviceManager graphics;
@@ -44,8 +44,11 @@ namespace GameWorld
         Enemy enemy1, enemy2;
         List<Enemy> enemies;
         List<Enemy> enemies2;
-        Coin coin1, coin2;
-        List<Coin> coins;
+        
+        Coin coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10, coin11, coin12, coin13, coin14, coin15, coin16, coin17, coin18, coin19, coin20;
+        List<Coin> coinslvl1/*, coinslvl2*/;
+        
+
         Map map;
         Player player;
         //bool isDeadly;
@@ -66,16 +69,35 @@ namespace GameWorld
             // TODO: Add your initialization logic here
 
             _currentGameState = GameState.TitleScreen;
-
+            
             level = new Map();
             enemies = new List<Enemy>();
             enemies2 = new List<Enemy>();
-            coins = new List<Coin>();
+            coinslvl1 = new List<Coin>();
+           // coinslvl2 = new List<Coin>();
             enemy1 = new Enemy();
             enemy2 = new Enemy();
-            // enemy3 = new Speedyboi(new Vector2(450,150),player,true);
+            // enemy3 = new Speedyboi(new Vector2(450,150),player,true); 
             coin1 = new Coin();
             coin2 = new Coin();
+            coin3 = new Coin();
+            coin4 = new Coin();
+            coin5 = new Coin();
+            coin6 = new Coin();
+            coin7 = new Coin();
+            coin8 = new Coin();
+            coin9 = new Coin();
+            coin10 = new Coin();
+            coin11 = new Coin();
+            coin12 = new Coin();
+            coin13 = new Coin();
+            coin14 = new Coin();
+            coin15 = new Coin();
+            coin16 = new Coin();
+            coin17 = new Coin();
+            coin18 = new Coin();
+            coin19 = new Coin();
+            coin20 = new Coin();
             player = new Player();
             initiateObjects();
             base.Initialize();
@@ -89,17 +111,64 @@ namespace GameWorld
 
         private void initiateObjects()
         {
-            coin1.position = new Vector2(250, 296);
-            coin2.position = new Vector2(405, 296);
-            enemy1.position = new Vector2(900, 380);
-            enemy2.position = new Vector2(100, 380);
-            enemy1.speed = 1f;
-            enemy2.speed = 2f;
-            enemies.Add(enemy1);
-            enemies2.Add(enemy2);
-            coins.Add(coin1);
-            coins.Add(coin2);
+            
+            if (level.isLevel1 == true)
+            {
+                
+                //COINS
+                coin1.position = new Vector2(464, 601);
+                coin2.position = new Vector2(14, 87);
+                coin3.position = new Vector2(718, 280);
+                coin4.position = new Vector2(967, 507);
+                coin5.position = new Vector2(1167, 155);
+                coin6.position = new Vector2(2216, 86);
+                coin7.position = new Vector2(2106, 351);
+                coin8.position = new Vector2(2372, 602);
+                coin9.position = new Vector2(2960, 413);
+                coin10.position = new Vector2(3146, 282);
+                coinslvl1.Add(coin1);
+                coinslvl1.Add(coin2);
+                coinslvl1.Add(coin3);
+                coinslvl1.Add(coin4);
+                coinslvl1.Add(coin5);
+                coinslvl1.Add(coin6);
+                coinslvl1.Add(coin7);
+                coinslvl1.Add(coin8);
+                coinslvl1.Add(coin9);
+                coinslvl1.Add(coin10);
+
+                //ENEMIES
+                enemy1.position = new Vector2(900, 380);
+                enemy2.position = new Vector2(450, 380);
+                enemy1.speed = 1f;
+                enemy2.speed = 2f;
+                enemies.Add(enemy1);
+                enemies2.Add(enemy2);
+            }
+            
+            /*    coin1.position = new Vector2(100, 50);
+                coin2.position = new Vector2(100, 100);
+                coin3.position = new Vector2(100, 150);
+                coin4.position = new Vector2(100, 200);
+                coin5.position = new Vector2(100, 250);
+                coin6.position = new Vector2(100, 300);
+                coin7.position = new Vector2(100, 351);
+                coin8.position = new Vector2(100, 400);
+                coin9.position = new Vector2(100, 450);
+                coin10.position = new Vector2(100, 50);
+                coinslvl2.Add(coin11);
+                coinslvl2.Add(coin12);
+                coinslvl2.Add(coin13);
+                coinslvl2.Add(coin14);
+                coinslvl2.Add(coin15);
+                coinslvl2.Add(coin16);
+                coinslvl2.Add(coin17);
+                coinslvl2.Add(coin18);
+                coinslvl2.Add(coin19);
+                coinslvl2.Add(coin20);*/
+            
         }
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -112,7 +181,7 @@ namespace GameWorld
             
             camera = new Camera(GraphicsDevice.Viewport);
 
-            level.Level2();
+            level.Level1();
 
             //soundeffect
             effect = Content.Load<SoundEffect>("WOO");
@@ -129,7 +198,7 @@ namespace GameWorld
             MediaPlayer.Play(Backgroundmusic);
             MediaPlayer.IsRepeating = true;
             //TEXTURES
-            _pauseTexture = Content.Load<Texture2D>("titlescreen");
+          //  _pauseTexture = Content.Load<Texture2D>("titlescreen");
             _titleScreenTexture = Content.Load<Texture2D>("titlescreen");
             _endGameTexture = Content.Load<Texture2D>("titlescreen");
 
@@ -138,20 +207,45 @@ namespace GameWorld
             _score = new Score(_scorefont);
 
             player.Load(Content);
-            foreach (Enemy enemy in enemies)
+            
+            if (level.isLevel1 == true)
             {
+                foreach (Coin coin in coinslvl1)
+                {
+                    coin.Load(Content);
 
-                enemy.Load(Content, false, true);
-            }
-            foreach (Enemy enemy in enemies2)
-            {
+                }
 
-                enemy.Load(Content, true, false);
+                foreach (Enemy enemy in enemies)
+                {
+
+                    enemy.Load(Content, false, true);
+                }
+                foreach (Enemy enemy in enemies2)
+                {
+
+                    enemy.Load(Content, true, false);
+                }
             }
-            foreach (Coin coin in coins)
+           /* if (level.isLevel1 == false)
             {
-                coin.Load(Content);
-            }
+                foreach (Coin coin in coinslvl2)
+                {
+                    coin.Load(Content);
+
+                }
+
+                foreach (Enemy enemy in enemies)
+                {
+
+                    enemy.Load(Content, false, true);
+                }
+                foreach (Enemy enemy in enemies2)
+                {
+
+                    enemy.Load(Content, true, false);
+                }
+            }*/
 
 
             //enemy.Load(Content);
@@ -189,41 +283,75 @@ namespace GameWorld
 
 
                         player.Update(gameTime);
-                        foreach (Enemy enemy in enemies)
+                        
+                    if (level.isLevel1 == true)
+                    {
+                        foreach (Coin coin in coinslvl1)
                         {
-                            enemy.Update(gameTime, player);
-                        }
-                        foreach (Enemy enemy in enemies2)
-                        {
-                            enemy.Update(gameTime, player);
-                        }
-                        foreach (Coin coin in coins)
-                        {
+
                             coin.Update(gameTime, player);
                         }
-                        //enemy.Update(gameTime, player);
-
-
-                        foreach (Enemy enemy in enemies)
-                        {
-                            player.checkEnemyCollision(enemy, effect2);
-                        }
-                        foreach (Enemy enemy in enemies2)
-                        {
-                            player.checkEnemyCollision(enemy, effect2);
-                        }
-                        foreach (Coin coin in coins)
+                        foreach (Coin coin in coinslvl1)
                         {
                             player.checkCoinColision(coin, effect);
                         }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            enemy.Update(gameTime, player);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            enemy.Update(gameTime, player);
+                        }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            player.checkEnemyCollision(enemy, effect2);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            player.checkEnemyCollision(enemy, effect2);
+                        }
+                    }    
+                        //enemy.Update(gameTime, player);
                         if (player.score == 10)
                         {
-                            _currentGameState = GameState.EndGame;
+                        ResetLevel();
+                        level.Level2();
+                        
+                        //_currentGameState = GameState.EndGame;
+                        player.score = 0;
                         }
 
+                 /*   if (level.isLevel1 == false)
+                    {
+                        foreach (Coin coin in coinslvl2)
+                        {
 
-                    
-                    
+                            coin.Update(gameTime, player);
+                        }
+                        foreach (Coin coin in coinslvl2)
+                        {
+                            player.checkCoinColision(coin, effect);
+                        }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            enemy.Update(gameTime, player);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            enemy.Update(gameTime, player);
+                        }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            player.checkEnemyCollision(enemy, effect2);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            player.checkEnemyCollision(enemy, effect2);
+                        }
+                    }*/
+
+
 
 
 
@@ -242,7 +370,7 @@ namespace GameWorld
 
             foreach (CollisionTiles tile in level.CollisionTiles)
             {
-                player.Collision(tile.Rectangle, level.Width, level.Height, tile.isDeadly, effect2);
+                player.Collision(tile.Rectangle, level.Width, level.Height, tile.isDeadly, tile.isEnd, effect2);
                 foreach (Enemy enemy in enemies)
                 {
                     enemy.Collision(tile.Rectangle, level.Width, level.Height);
@@ -274,29 +402,52 @@ namespace GameWorld
             {
 
                 case GameState.TitleScreen:
-                    spriteBatch.Draw(_titleScreenTexture, new Rectangle(0, 0, 960, 540), Color.White);
+                    spriteBatch.Draw(_titleScreenTexture, new Rectangle((int)_camera.topLeft.X, (int)_camera.topLeft.Y, 960, 540), Color.White);
                     break;
                 case GameState.InGame:
 
                     //spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(backgroundimage, new Rectangle((int)_camera.topLeft.X, (int)_camera.topLeft.Y, 800, 480), Color.White);
 
-                    foreach (Enemy enemy in enemies)
+                    
+                    if (level.isLevel1 == true)
                     {
-                        enemy.Draw(spriteBatch);
-                    }
-                    foreach (Enemy enemy in enemies2)
-                    {
-                        enemy.Draw(spriteBatch);
-                    }
-                    foreach (Coin coin in coins)
-                    {
-                        if (coin.picked == false)
+                        foreach (Coin coin in coinslvl1)
                         {
-                            coin.Draw(spriteBatch);
-                        }
+                            if (coin.picked == false)
+                            {
+                                coin.Draw(spriteBatch);
+                            }
 
+                        }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            enemy.Draw(spriteBatch);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            enemy.Draw(spriteBatch);
+                        }
                     }
+                   /* if (level.isLevel1 == false)
+                    {
+                        foreach (Coin coin in coinslvl2)
+                        {
+                            if (coin.picked == false)
+                            {
+                                coin.Draw(spriteBatch);
+                            }
+
+                        }
+                        foreach (Enemy enemy in enemies)
+                        {
+                            enemy.Draw(spriteBatch);
+                        }
+                        foreach (Enemy enemy in enemies2)
+                        {
+                            enemy.Draw(spriteBatch);
+                        }
+                    }*/
 
                     //enemy.Draw(spriteBatch);
                     level.Draw(spriteBatch);
@@ -318,6 +469,15 @@ namespace GameWorld
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+        public void ResetLevel()
+        {
+            level.Changelevel();
+            enemies.Clear();
+            enemies2.Clear();
+            player.position = player.spawn;
+            level.isLevel1 = false;
+            initiateObjects();
         }
     }
 }

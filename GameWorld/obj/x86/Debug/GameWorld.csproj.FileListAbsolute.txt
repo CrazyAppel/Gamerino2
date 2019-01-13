@@ -301,3 +301,6 @@ J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.wma
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Song.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\titlescreen.xnb
 J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\playerAttack.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Ghost123.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\End.xnb
+J:\SWAG\Gamerino2\GameWorld\bin\Windows\x86\Debug\Content\Menu.xnb

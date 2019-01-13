@@ -6,17 +6,20 @@
   <SourceFiles>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/background.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Deadaf.wav</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/End.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/font.spritefont</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Ghost.png</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/ghost-halo-2.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/gothic-hero-run.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/jump.png</File>
-    <File>J:/SWAG/Gamerino2/GameWorld/Content/Player.png</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/Menu.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerAttack.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerIdle.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerJump.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/playerRun.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/resizedPRun.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/score.spritefont</File>
+    <File>J:/SWAG/Gamerino2/GameWorld/Content/skeleton-2.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Song.mp3</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Tile1.png</File>
     <File>J:/SWAG/Gamerino2/GameWorld/Content/Tile2.png</File>
@@ -30,6 +33,8 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File>Ghost123.png</File>
+    <File>Ghost.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
@@ -39,6 +44,7 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File>Player.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

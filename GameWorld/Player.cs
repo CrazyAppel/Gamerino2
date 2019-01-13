@@ -18,8 +18,8 @@ namespace GameWorld
     {
         public int score = 0;
 
-        public Vector2 position = new Vector2(0,377);
-        public Vector2 spawn = new Vector2(0, 377);
+        public Vector2 position = new Vector2(0, 550);
+        public Vector2 spawn = new Vector2(0, 550);
         private SpriteFont font;
         private Vector2 velocity;
         private Rectangle rectangle;
@@ -114,8 +114,9 @@ namespace GameWorld
             }
             if (hasDied==true)
             {
-                position = new Vector2(100, 100);
-                
+                position.X = (int)0;
+                position.Y = (int)550;
+
                 hasDied = false;
             }
 
@@ -233,9 +234,10 @@ namespace GameWorld
         {
             if (IntersectsPixel(this.rectangle, this.textureData, enemy.rectangle, enemy.TextureData))
             {
-                //snowball.IsRemoved = true;
+                
                hasDied = true;
-              //  position = new Vector2(450, 100);
+                
+                //  position = new Vector2(450, 100);
                 effect.Play();
             }
         }
@@ -290,7 +292,8 @@ namespace GameWorld
                 }*/
             if (isDeadly == true && (rectangle.TouchTopOf(newRectangle) /*|| rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle)*/ || rectangle.TouchBottomOf(newRectangle)))
             {
-                position = new Vector2(450, 100);
+                position.X = (int)0;
+                position.Y = (int)550;
                 effect.Play();
             }
             if (isEnd == true && (rectangle.TouchTopOf(newRectangle) || rectangle.TouchLeftOf(newRectangle) || rectangle.TouchRightOf(newRectangle) || rectangle.TouchBottomOf(newRectangle)))

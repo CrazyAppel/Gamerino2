@@ -9,7 +9,13 @@ namespace GameWorld
 {
     static class RectangleHelper
     {
-
+        /// <summary>
+        /// THE COLLISION DETECTION
+        /// CHECKS IF 2 RECTANGLES ARE COLLIDING
+        /// </summary>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <returns></returns>
         public static bool TouchTopOf(this Rectangle r1, Rectangle r2)
         {
             return (r1.Bottom >= r2.Top - 1 &&

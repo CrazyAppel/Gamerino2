@@ -10,6 +10,11 @@ namespace GameWorld
 {
     class CollisionTiles : Tiles
     {
+        /// <summary>
+        /// MAKES THE TILES SO YOU CAN COLLIDE WITH THEM
+        /// SETS TEXTURE TO TILE
+        /// </summary>
+       
         public CollisionTiles(int tileId, Rectangle newRectangle, bool isDeadly,bool isEnd, string side)
         {
             

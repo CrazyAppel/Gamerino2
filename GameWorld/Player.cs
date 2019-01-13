@@ -1,6 +1,5 @@
 ﻿using GameWorld.Managers;
 using GameWorld.Models;
-using GameWorld.Sprites;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -14,6 +13,13 @@ using System.Threading.Tasks;
 
 namespace GameWorld
 {
+    /// <summary>
+    /// LOADS THE PLAYERS CHARACTER
+    /// DETERMINES THE INPUTS TO MOVE THE CHARACTER
+    /// MOVES THE CHARACTER WITH ANIMATIONS
+    /// CHECKS IF COLLISION HAS BEEN MADE IN CASE IT IS DEADLY
+    /// KILLS THE PLAYER
+    /// </summary>
     class Player
     {
         public int score = 0;

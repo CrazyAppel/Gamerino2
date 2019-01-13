@@ -11,7 +11,10 @@ namespace GameWorld
 {
     class Tiles
     {
-        
+        /// <summary>
+        /// PROPERTIES OF A TILE
+        /// TILEDRAWING
+        /// </summary>
 
         public Texture2D texture;
         public bool isDeadly;

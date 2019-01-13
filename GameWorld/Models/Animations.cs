@@ -9,6 +9,9 @@ namespace GameWorld.Models
 {
     public class Animations
     {
+        /// <summary>
+        /// MAKES LIST OF THE IMAGES FOR ANIMATION
+        /// </summary>
         public int CurrentFrame { get; set; }
 
         public int FrameCount { get; private set; }

@@ -149,8 +149,8 @@ namespace GameWorld
                 coinslvl2.Add(coin20);
 
                 //ENEMIES
-                enemy1.position = new Vector2(900, 380);
-                enemy2.position = new Vector2(450, 380);
+                enemy1.position = new Vector2(1200, 380);
+                enemy2.position = new Vector2(3062, 350);
                 enemy1.speed = 1f;
                 enemy2.speed = 2f;
                 enemies.Add(enemy1);
@@ -158,16 +158,16 @@ namespace GameWorld
             }
             else
             {
-                coin11.position = new Vector2(100, 50);
-                coin12.position = new Vector2(100, 100);
-                coin13.position = new Vector2(100, 150);
-                coin14.position = new Vector2(100, 200);
-                coin15.position = new Vector2(100, 250);
-                coin16.position = new Vector2(100, 300);
-                coin17.position = new Vector2(100, 351);
-                coin18.position = new Vector2(100, 400);
-                coin19.position = new Vector2(100, 450);
-                coin20.position = new Vector2(100, 50);
+                coin11.position = new Vector2(696, 541);
+                coin12.position = new Vector2(1418, 607);
+                coin13.position = new Vector2(1800, 525);
+                coin14.position = new Vector2(2604, 607);
+                coin15.position = new Vector2(3115, 478);
+                coin16.position = new Vector2(3115, 80);
+                coin17.position = new Vector2(2938, 282);
+                coin18.position = new Vector2(300, 282);
+                coin19.position = new Vector2(350, 282);
+                coin20.position = new Vector2(400, 282);
             }
 
         }
@@ -331,7 +331,7 @@ namespace GameWorld
                         }
                     }
                     //enemy.Update(gameTime, player);
-                    if (player.score == 10)
+                    if (player.score == 1 && level.isLevel1 == true)
                         {
                         ResetLevel();
                         level.Level2();
@@ -339,7 +339,7 @@ namespace GameWorld
                         //_currentGameState = GameState.EndGame;
                         player.score = 0;
                         }
-                    if (player.score == 5 && level.isLevel1 == false)
+                    if (player.score == 1 && level.isLevel1 == false)
                     {
                         _currentGameState = GameState.EndGame;
                     }

@@ -10,6 +10,9 @@ namespace GameWorld
 {
     class Score
     {
+        /// <summary>
+        /// DRAWS THE SCORE ON THE BOARD
+        /// </summary>
         public SpriteFont ScoreFont { get; }
         public Vector2 Position { get; set; } = new Vector2(0, 0);
         public static int ScorePoints { get; set; } = 0;

@@ -10,6 +10,9 @@ namespace GameWorld
 {
     public class Camera
     {
+        /// <summary>
+        /// DETERMINS THE MIDDLE OF THE SCREEN FOR THE PLAYER (AND TOPLEFT FOR IMAGES)
+        /// </summary>
         private Matrix transform;
         public Matrix Transform
         {

@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 
 namespace GameWorld
 {
+    /// <summary>
+    /// CREATES THE ENEMIES LOADS THE TEXTURES etc.
+    /// MAKES ENEMIES CHASE THE PLAYER
+    /// </summary>
     class Enemy
     {
         private Texture2D texture;

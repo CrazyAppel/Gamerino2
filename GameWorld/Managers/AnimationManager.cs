@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GameWorld.Managers
 {
+    /// <summary>
+    /// PLAYS THE ANIMATION
+    /// </summary>
     public class AnimationManager
     {
         private Animations _animation;
